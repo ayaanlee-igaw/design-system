@@ -131,17 +131,27 @@
         margin-left: $comp-input-spacing-prefixicon-right;
       }
     }
+
+    // count
+    .el-input__count {
+      .el-input__count-inner {
+        font: $comp-input-typography-sub-text;
+        color: $comp-input-color-text-sub;
+      }
+    }
   }
 
   // default setting
   .el-input__wrapper {
-    color: $comp-input-color-text-active;
     background-color: $comp-input-color-background;
     border: $comp-input-border-default;
     border-radius: $comp-input-border-radius-default;
     box-shadow: none;
-    &::placeholder {
-      color: $comp-input-color-text-placeholder;
+    .el-input__inner {
+      color: $comp-input-color-text-active;
+      &::placeholder {
+        color: $comp-input-color-text-placeholder;
+      }
     }
   }
 
@@ -238,6 +248,7 @@
     .el-input-group__prepend,
     .el-input-group__append {
       padding: 0 $comp-input-spacing-slot-plaintext-horizontal;
+      color: $comp-input-color-slot-button-text;
       background-color: $comp-input-color-slot-plaintext-background;
       //box-shadow: none;
       .el-button {
