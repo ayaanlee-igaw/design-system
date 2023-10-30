@@ -11,18 +11,14 @@
 
     // prefix
     .el-input__prefix {
-      .el-input__prefix-inner > .el-input__icon,
-      .el-input__icon,
-      .el-input__icon::before {
+      .el-input__prefix-inner > .el-input__icon {
         font-size: $icon-sizing;
         width: $icon-sizing;
       }
     }
     // suffix
     .el-input__suffix {
-      .el-input__suffix-inner > .el-input__icon,
-      .el-input__icon,
-      .el-input__icon::before {
+      .el-input__suffix-inner > .el-input__icon {
         font-size: $icon-sizing;
         width: $icon-sizing;
       }
@@ -61,23 +57,6 @@
   }
 }
 
-// valid error
-.el-form-item {
-  &.is-error {
-    .el-input {
-      .el-input__wrapper {
-        border: $comp-input-border-error;
-      }
-    }
-
-    .el-textarea {
-      .el-textarea__inner {
-        border: $comp-input-border-error;
-      }
-    }
-  }
-}
-
 // textarea
 .el-textarea {
   // default setting
@@ -91,12 +70,14 @@
       color: $comp-input-color-text-placeholder;
     }
 
+    // focus
     &:focus {
       border: $comp-input-border-active;
       box-shadow: none;
     }
   }
 
+  // hover
   &:not(.is-disabled) {
     .el-textarea__inner:not(:focus):hover {
       border: $comp-input-border-hover;
@@ -140,17 +121,13 @@
 
     // prefix margin
     .el-input__prefix {
-      .el-input__prefix-inner > .el-input__icon,
-      .el-input__icon,
-      .el-input__icon::before {
+      .el-input__prefix-inner > .el-input__icon {
         margin-right: $comp-input-spacing-prefixicon-right;
       }
     }
     // suffix margin
     .el-input__suffix {
-      .el-input__suffix-inner > .el-input__icon,
-      .el-input__icon,
-      .el-input__icon::before {
+      .el-input__suffix-inner > .el-input__icon {
         margin-left: $comp-input-spacing-prefixicon-right;
       }
     }
@@ -233,7 +210,9 @@
       }
       .el-input-group__prepend {
         border-radius: $comp-input-border-radius-default 0 0 $comp-input-border-radius-default;
-        box-shadow: none;
+        .el-button {
+          border-radius: $comp-input-border-radius-default 0 0 $comp-input-border-radius-default;
+        }
       }
     }
     &.el-input-group--append {
@@ -242,7 +221,9 @@
       }
       .el-input-group__append {
         border-radius: 0 $comp-input-border-radius-default $comp-input-border-radius-default 0;
-        box-shadow: none;
+        .el-button {
+          border-radius: 0 $comp-input-border-radius-default $comp-input-border-radius-default 0;
+        }
       }
     }
     &.el-input-group--prepend.el-input-group--append {
@@ -258,6 +239,7 @@
     .el-input-group__append {
       padding: 0 $comp-input-spacing-slot-plaintext-horizontal;
       background-color: $comp-input-color-slot-plaintext-background;
+      //box-shadow: none;
       .el-button {
         display: flex;
         justify-content: center;
@@ -266,44 +248,62 @@
         height: 100%;
         &:not(:active):not(:focus),
         &:not(:active):focus:hover {
-          border-top: $comp-select-border-default;
-          border-bottom: $comp-select-border-default;
-          box-shadow: none;
+          border: $comp-select-border-default;
         }
-      }
-    }
-    .el-input-group__prepend {
-      border-left: $comp-select-border-default;
-      .el-button {
-        border-radius: $comp-input-border-radius-default 0 0 $comp-input-border-radius-default;
-      }
-    }
-    .el-input-group__append {
-      border-right: $comp-select-border-default;
-      .el-button {
-        border-radius: 0 $comp-input-border-radius-default $comp-input-border-radius-default 0;
       }
     }
   }
 
   // input group select
   &.el-input-group.input-with-select {
-    .el-input-group__prepend,
-    .el-input-group__append {
-      .el-select {
-        margin-left: -$comp-input-spacing-slot-plaintext-horizontal;
-        margin-right: -$comp-input-spacing-slot-plaintext-horizontal;
-        background-color: $comp-input-color-background;
-        .el-input__wrapper {
-          border: none;
+    &.el-input-group--prepend,
+    &.el-input-group--append {
+      .el-input-group__prepend,
+      .el-input-group__append {
+        .el-select {
+          margin-left: -$comp-input-spacing-slot-plaintext-horizontal;
+          margin-right: -$comp-input-spacing-slot-plaintext-horizontal;
+          background-color: $comp-input-color-background;
+          .el-input {
+            .el-input__wrapper {
+              box-shadow: none !important;
+              &.is-focus {
+                border: $comp-select-border-selected;
+                box-shadow: none;
+              }
+            }
+
+            &.is-focus {
+              .el-input__wrapper,
+              .el-input__wrapper.is-focus {
+                border: $comp-select-border-selected;
+              }
+            }
+          }
+          //.el-input--suffix,
+          //.el-input--prefix {
+          //  .el-input__wrapper {
+          //    padding: 0 $comp-select-spacing-horizontal;
+          //    width: $comp-select-sizing-mixed-input-width-small;
+          //  }
+          //}
         }
-        //.el-input--suffix,
-        //.el-input--prefix {
-        //  .el-input__wrapper {
-        //    padding: 0 $comp-select-spacing-horizontal;
-        //    width: $comp-select-sizing-mixed-input-width-small;
-        //  }
-        //}
+      }
+      .el-input-group__prepend {
+        .el-select {
+          .el-input__wrapper {
+            border: $comp-select-border-default;
+            border-radius: $comp-input-border-radius-default 0 0 $comp-input-border-radius-default;
+          }
+        }
+      }
+      .el-input-group__append {
+        .el-select {
+          .el-input__wrapper {
+            border: $comp-select-border-default;
+            border-radius: 0 $comp-input-border-radius-default $comp-input-border-radius-default 0;
+          }
+        }
       }
     }
   }
@@ -311,17 +311,6 @@
 
 // input number
 .el-input-number {
-  // controls button position
-  &.is-controls-right,
-  &.is-controls-left {
-    .el-input-number__increase {
-      height: 50%;
-    }
-    .el-input-number__decrease {
-      height: 50%;
-    }
-  }
-
   // input number disabled, hover, active
   &:not(.is-disabled) {
     .el-input-number__decrease,
@@ -346,6 +335,17 @@
           opacity: $comp-input-opacity-disabled;
         }
       }
+    }
+  }
+
+  // controls button position
+  &.is-controls-right,
+  &.is-controls-left {
+    .el-input-number__increase {
+      height: 50%;
+    }
+    .el-input-number__decrease {
+      height: 50%;
     }
   }
 

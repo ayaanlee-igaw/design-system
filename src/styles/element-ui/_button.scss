@@ -48,10 +48,9 @@
   transition: $comp-button-transition-ease-2;
   border-radius: $comp-button-border-radius-default;
 
-  // custom - full
-  // @todo 토큰 바인딩
+  // custom calss - full
   &.is-full {
-    width: 100%;
+    width: $comp-button-sizing-width-100per;
   }
 
   // default and round size
