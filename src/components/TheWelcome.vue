@@ -4,6 +4,7 @@
     <Input />
     <Select />
     <Radio />
+    <CheckBox />
   </div>
 </template>
 
@@ -12,4 +13,5 @@
   import Input from "@/components/Input/Input.vue";
   import Select from "@/components/Select/Select.vue";
   import Radio from "@/components/Radio/Radio.vue";
+  import CheckBox from "@/components/CheckBox/CheckBox.vue";
 </script>

@@ -34,8 +34,16 @@
     }
     &.is-disabled .el-checkbox__label,
     .el-checkbox__label {
-      font: $comp-checkbox-typography-text-medium-selected;
+      //font: $comp-checkbox-typography-text-medium-selected;
       color: $comp-checkbox-color-text-selected;
+    }
+  }
+
+  // indeterminate
+  .el-checkbox__input.is-indeterminate {
+    .el-checkbox__inner {
+      background-color: $comp-checkbox-color-background-active;
+      border: $comp-checkbox-border-selected;
     }
   }
 
@@ -74,11 +82,13 @@
     }
 
     // checkbox bordered sizing
-    @include checkbox-bordered-sizing(
-        $comp-checkbox-sizing-button-height-large,
-        $comp-checkbox-typography-text-large,
-        $comp-checkbox-typography-text-large-selected
-    );
+    &, &.el-checkbox--large {
+      @include checkbox-bordered-sizing(
+          $comp-checkbox-sizing-button-height-large,
+          $comp-checkbox-typography-text-large,
+          $comp-checkbox-typography-text-large-selected
+      );
+    }
     &.el-checkbox--medium {
       @include checkbox-bordered-sizing(
           $comp-checkbox-sizing-button-height-medium,
