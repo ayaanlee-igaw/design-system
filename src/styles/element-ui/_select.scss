@@ -4,9 +4,12 @@
     .el-input__wrapper {
       height: auto;
       min-height: $height;
-      font: $font;
-      &::placeholder {
+      .el-input__inner {
+        height: $height;
         font: $font;
+        &::placeholder {
+          font: $font;
+        }
       }
     }
 

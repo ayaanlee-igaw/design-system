@@ -45,7 +45,7 @@
 
 .el-button {
   // default
-  transition: var(--comp-button-transition-ease-2);
+  transition: $comp-button-transition-ease-2;
   border-radius: var(--comp-button-border-radius-default);
 
   // custom calss - full
