@@ -1,3 +1,4 @@
+// scss
 $ref-transition-background-color-ease-2: background-color .2s ease;
 $ref-transition-color-ease-2: color .2s ease;
 $ref-transition-border-color-ease-2: border-color .2s ease;
@@ -8,3 +9,17 @@ $sys-transition-color-ease-2: $ref-transition-color-ease-2, $ref-transition-back
 $sys-animation-flash-ease-2: $ref-animation-flash-ease-2;
 $comp-button-transition-ease-2: $sys-transition-color-ease-2;
 $comp-badge-flash-ease-2: $sys-animation-flash-ease-2;
+
+// css
+:root {
+  --ref-transition-background-color-ease-2: background-color .2s ease;
+  --ref-transition-color-ease-2: color .2s ease;
+  --ref-transition-border-color-ease-2: border-color .2s ease;
+  --ref-transition-box-shadow-ease-2: box-shadow .2s ease;
+  --ref-animation-flash-ease-2: flash 2s infinite ease-in-out;
+  --ref-animation-flash-ease-3: flash 3s infinite ease-in-out;
+  --sys-transition-color-ease-2: var(--ref-transition-color-ease-2), var(--ref-transition-background-color-ease-2), var(--ref-transition-border-color-ease-2), var(--ref-transition-box-shadow-ease-2);
+  --sys-animation-flash-ease-2: var(--ref-animation-flash-ease-2);
+  --comp-button-transition-ease-2: var(--sys-transition-color-ease-2);
+  --comp-badge-flash-ease-2: var(--sys-animation-flash-ease-2);
+}
