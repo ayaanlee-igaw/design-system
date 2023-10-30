@@ -5,6 +5,7 @@
     <Select />
     <Radio />
     <CheckBox />
+    <Tag />
   </div>
 </template>
 
@@ -14,4 +15,5 @@
   import Select from "@/components/Select/Select.vue";
   import Radio from "@/components/Radio/Radio.vue";
   import CheckBox from "@/components/CheckBox/CheckBox.vue";
+  import Tag from "@/components/Tag/Tag.vue";
 </script>
