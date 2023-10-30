@@ -19,7 +19,7 @@
   }
 }
 
-// button color mixin
+// Button color mixin
 @mixin button-color($color, $bg, $hover-bg, $pressed-bg, $border, $hover-border, $pressed-border) {
   color: $color;
   background-color: $bg;
@@ -105,33 +105,33 @@
     @include button-custom-sizing($comp-button-sizing-mini, $comp-button-typography-mini, $comp-button-sizing-icon-mini);
   }
 
-  // text button
+  // text Button
   // @todo type에 따른 정의
-  //&.el-button--text {
-  //  padding: $comp-button-spacing-none;
+  //&.el-Button--text {
+  //  padding: $comp-Button-spacing-none;
   //  height: auto;
-  //  color: $comp-button-color-text-primary;
+  //  color: $comp-Button-color-text-primary;
   //  background-color: transparent;
   //  border-color: transparent;
   //  &.is-disabled:hover {
-  //    color: $comp-button-color-text-primary;
+  //    color: $comp-Button-color-text-primary;
   //    background-color: transparent;
   //    border-color: transparent;
   //  }
   //  &:not(.is-disabled):hover,
   //  &:not(.is-disabled):focus {
-  //    color: $comp-button-color-text-primary-hover;
+  //    color: $comp-Button-color-text-primary-hover;
   //    background-color: transparent;
   //    border-color: transparent;
   //    &:active {
-  //      color: $comp-button-color-text-primary-pressed;
+  //      color: $comp-Button-color-text-primary-pressed;
   //      background-color: transparent;
   //      border-color: transparent;
   //    }
   //  }
   //}
 
-  //  button color
+  //  Button color
   &, &.is-disabled {
     @include button-color(
         $comp-button-color-text-base,

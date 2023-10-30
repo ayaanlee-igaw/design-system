@@ -1,6 +1,6 @@
 // pagination sizing mixin
 @mixin pagination-sizing($height, $pager-padding, $btn-padding, $btn-icon-size) {
-  // pagination number, action button
+  // pagination number, action Button
   .el-pager {
     .number,
     .more {
@@ -13,7 +13,7 @@
     }
   }
 
-  // pagination button
+  // pagination Button
   .btn-prev,
   .btn-next {
     display: inline-flex;
@@ -35,25 +35,25 @@
   .btn-next {
     color: $color;
 
-    // pagination button disabled
+    // pagination Button disabled
     &:disabled {
       color: $color;
       opacity: $comp-pagination-opacity-disabled;
     }
 
-    // pagination button hover
+    // pagination Button hover
     &:not(:disabled):hover {
       color: $hover-color;
     }
   }
 
-  // pagination number, quicknext button
+  // pagination number, quicknext Button
   .el-pager {
     .number,
     .more {
       color: $color;
 
-      // pagination number, quicknext button hover
+      // pagination number, quicknext Button hover
       &:not(.disabled):hover {
         color: $hover-color;
       }
@@ -79,7 +79,7 @@
     border-radius: $border-radius;
   }
 
-  // background type number, quicknext button
+  // background type number, quicknext Button
   .el-pager {
     .number,
     .more {
