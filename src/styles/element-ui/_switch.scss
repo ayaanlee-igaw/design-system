@@ -1,45 +1,33 @@
 .el-switch {
-  width: $comp-switch-sizing-width;
-  height: $comp-switch-sizing-height;
+  width: var(--comp-switch-sizing-width);
+  height: var(--comp-switch-sizing-height);
   .el-switch__core {
-    width: $comp-switch-sizing-width;
-    height: $comp-switch-sizing-height;
-    background-color: $comp-switch-color-background-off;
+    width: var(--comp-switch-sizing-width);
+    height: var(--comp-switch-sizing-height);
+    background-color: var(--comp-switch-color-background-off);
     border: none;
-    border-radius: $comp-switch-border-radius-background;
-    &::after {
-      top: $comp-switch-spacing-padding;
-      left: $comp-switch-spacing-padding;
-      width: $comp-switch-sizing-toggle;
-      height: $comp-switch-sizing-toggle;
+    border-radius: var(--comp-switch-border-radius-background);
+    .el-switch__action {
+      top: var(--comp-switch-spacing-padding);
+      left: var(--comp-switch-spacing-padding);
+      width: var(--comp-switch-sizing-toggle);
+      height: var(--comp-switch-sizing-toggle);
     }
   }
 
   &.is-checked {
-    $switch-circle--checked-position: -22px;
+    $switch-circle--checked-position: calc(100% - 22px);
     .el-switch__core {
-      background-color: $comp-switch-color-background-on;
+      background-color: var(--comp-switch-color-background-on);
       border: none;
-      &::after {
-        margin-left: $switch-circle--checked-position;
+      .el-switch__action {
+        left: $switch-circle--checked-position;
       }
     }
   }
 
   &.is-disabled {
-    opacity: $comp-switch-opacity-disabled;
+    opacity: var(--comp-switch-opacity-disabled);
   }
 }
-
-//@use 'sass:math';
-
-//$switch-width: 40px;
-//
-//.el-switch__core {
-//  width: $switch-width;
-//}
-
-//.el-switch.is-checked .el-switch__button {
-//  transform: translate3d(math.div($switch-width, 2), 0, 0);
-//}
 

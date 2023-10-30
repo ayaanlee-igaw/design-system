@@ -7,6 +7,7 @@
     <CheckBox />
     <Tag />
     <Badge />
+    <Switch />
   </div>
 </template>
 
@@ -18,4 +19,5 @@
   import CheckBox from "@/components/CheckBox/CheckBox.vue";
   import Tag from "@/components/Tag/Tag.vue";
   import Badge from "@/components/Badge/Badge.vue";
+  import Switch from "@/components/Switch/Switch.vue";
 </script>
