@@ -3,6 +3,7 @@
     padding: 0 $comp-badge-spacing-horizontal;
     height: $comp-badge-sizing-medium;
     font: $comp-badge-typography-text;
+    border: none;
     border-radius: $comp-badge-border-radius-rounded;
 
     // dot
@@ -45,29 +46,3 @@
     }
   }
 }
-
-//.el-badge__content {
-//  min-width: 20px;
-//  height: 20px;
-//
-//  &.is-fixed {
-//    right: 10px;
-//  }
-//}
-//
-//.el-badge__content.is-dot {
-//  min-width: 0;
-//  width: 12px;
-//  height: 12px;
-//
-//  &.is-fixed {
-//    right: 6px;
-//  }
-//}
-//
-//.el-badge--flash {
-//  .el-badge__content {
-//    animation: flash 2s infinite ease-in-out;
-//  }
-//}
-

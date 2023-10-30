@@ -1,4 +1,6 @@
 <template>
+  <h2>Tag</h2>
+
   <div>
     <el-tag>Tag 1</el-tag>
     <el-tag type="success">Tag 2</el-tag>

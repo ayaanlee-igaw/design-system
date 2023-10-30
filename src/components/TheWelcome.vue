@@ -6,6 +6,7 @@
     <Radio />
     <CheckBox />
     <Tag />
+    <Badge />
   </div>
 </template>
 
@@ -16,4 +17,5 @@
   import Radio from "@/components/Radio/Radio.vue";
   import CheckBox from "@/components/CheckBox/CheckBox.vue";
   import Tag from "@/components/Tag/Tag.vue";
+  import Badge from "@/components/Badge/Badge.vue";
 </script>
