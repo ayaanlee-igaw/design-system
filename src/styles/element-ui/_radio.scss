@@ -25,9 +25,9 @@
   &, &.is-bordered {
     .el-radio__input {
       .el-radio__inner {
-        width: $comp-radio-sizing-backgorund;
-        height: $comp-radio-sizing-backgorund;
-        border: $comp-radio-border-default;
+        width: var(--comp-radio-sizing-backgorund);
+        height: var(--comp-radio-sizing-backgorund);
+        border: var(--comp-radio-border-default);
         &::after {
           $radio-inner-circle-sizing: $comp-radio-sizing-backgorund - $comp-radio-border-width-selected*2;
           width: $radio-inner-circle-sizing;
@@ -36,26 +36,26 @@
       }
     }
     .el-radio__label {
-      padding-left: $comp-radio-spacing-radio-right;
-      font: $comp-radio-typography-text-large;
-      color: $comp-radio-color-text-base;
+      padding-left: var(--comp-radio-spacing-radio-right);
+      font: var(--comp-radio-typography-text-large);
+      color: var(--comp-radio-color-text-base);
     }
   }
 
   // radio circle color
   .el-radio__inner {
-    background-color: $comp-radio-color-background;
+    background-color: var(--comp-radio-color-background);
     &::after {
-      background-color: $comp-radio-color-background;
+      background-color: var(--comp-radio-color-background);
     }
   }
   &.is-disabled,
   &.is-disabled.is-checked {
-    opacity: $comp-radio-opacity-disabled;
+    opacity: var(--comp-radio-opacity-disabled);
     .el-radio__inner {
-      background-color: $comp-radio-color-background;
+      background-color: var(--comp-radio-color-background);
       &::after {
-        background-color: $comp-radio-color-background;
+        background-color: var(--comp-radio-color-background);
       }
     }
   }
@@ -64,14 +64,14 @@
   &.is-checked {
     .el-radio__input {
       .el-radio__inner {
-        background-color: $comp-radio-color-tab-outline-selected;
-        border: $comp-radio-border-selected;
+        background-color: var(--comp-radio-color-tab-outline-selected);
+        border: var(--comp-radio-border-selected);
       }
     }
     .el-radio__label {
-      padding-left: $comp-radio-spacing-radio-right;
-      //font: $comp-radio-typography-text-large-selected;
-      color: $comp-radio-color-text-selected;
+      padding-left: var(--comp-radio-spacing-radio-right);
+      //font: var(--comp-radio-typography-text-large-selected);
+      color: var(--comp-radio-color-text-selected);
     }
   }
 
@@ -79,44 +79,44 @@
   &.is-bordered {
     display: inline-flex;
     align-items: center;
-    color: $comp-radio-color-text-base;
-    background-color: $comp-radio-color-background;
-    border: $comp-radio-border-button-default;
-    border-radius: $comp-radio-border-radius-button;
+    color: var(--comp-radio-color-text-base);
+    background-color: var(--comp-radio-color-background);
+    border: var(--comp-radio-border-button-default);
+    border-radius: var(--comp-radio-border-radius-button);
     &.is-checked {
-      padding: 0 $comp-radio-spacing-button-horizontal;
-      color: $comp-radio-color-text-selected;
-      border: $comp-radio-border-button-selected;
-      border-radius: $comp-radio-border-radius-button;
+      padding: 0 var(--comp-radio-spacing-button-horizontal);
+      color: var(--comp-radio-color-text-selected);
+      border: var(--comp-radio-border-button-selected);
+      border-radius: var(--comp-radio-border-radius-button);
     }
 
     // radio bordered sizing
     &, &.el-radio--large {
       @include radio-bordered-sizing(
-          $comp-radio-sizing-button-height-large,
-          $comp-radio-typography-text-large,
-          $comp-radio-typography-text-large-selected
+          var(--comp-radio-sizing-button-height-large),
+          var(--comp-radio-typography-text-large),
+          var(--comp-radio-typography-text-large-selected)
       );
     }
     &.el-radio--medium {
       @include radio-bordered-sizing(
-          $comp-radio-sizing-button-height-medium,
-          $comp-radio-typography-text-medium,
-          $comp-radio-typography-text-medium-selected
+          var(--comp-radio-sizing-button-height-medium),
+          var(--comp-radio-typography-text-medium),
+          var(--comp-radio-typography-text-medium-selected)
       );
     }
     &.el-radio--small {
       @include radio-bordered-sizing(
-          $comp-radio-sizing-button-height-small,
-          $comp-radio-typography-text-small,
-          $comp-radio-typography-text-small-selected
+          var(--comp-radio-sizing-button-height-small),
+          var(--comp-radio-typography-text-small),
+          var(--comp-radio-typography-text-small-selected)
       );
     }
     &.el-radio--mini {
       @include radio-bordered-sizing(
-          $comp-radio-sizing-button-height-mini,
-          $comp-radio-typography-text-mini,
-          $comp-radio-typography-text-mini-selected
+          var(--comp-radio-sizing-button-height-mini),
+          var(--comp-radio-typography-text-mini),
+          var(--comp-radio-typography-text-mini-selected)
       );
     }
   }
@@ -127,39 +127,51 @@
   .el-radio-button__inner {
     display: flex;
     align-items: center;
-    padding: 0 $comp-radio-spacing-tab-horizontal;
-    color: $comp-radio-color-tab-text;
-    background-color: $comp-radio-color-tab-background;
-    border: $comp-radio-border-button-default;
-    border-radius: $comp-radio-border-radius-tab;
+    padding: 0 var(--comp-radio-spacing-tab-horizontal);
+    color: var(--comp-radio-color-tab-text);
+    background-color: var(--comp-radio-color-tab-background);
+    border: var(--comp-radio-border-button-default);
+    border-radius: var(--comp-radio-border-radius-tab);
   }
 
   // radio Button sizing
   &, &.el-radio-button--large {
-    @include radio-button-sizing($comp-radio-typography-tab-large, $comp-radio-sizing-tab-height-large);
+    @include radio-button-sizing(
+    var(--comp-radio-typography-tab-large),
+    var(--comp-radio-sizing-tab-height-large)
+    );
   }
   &.el-radio-button--medium {
-    @include radio-button-sizing($comp-radio-typography-tab-medium, $comp-radio-sizing-tab-height-medium);
+    @include radio-button-sizing(
+    var(--comp-radio-typography-tab-medium),
+    var(--comp-radio-sizing-tab-height-medium)
+    );
   }
   &.el-radio-button--small {
-    @include radio-button-sizing($comp-radio-typography-tab-small, $comp-radio-sizing-tab-height-small);
+    @include radio-button-sizing(
+    var(--comp-radio-typography-tab-small),
+    var(--comp-radio-sizing-tab-height-small)
+    );
   }
   &.el-radio-button--mini {
-    @include radio-button-sizing($comp-radio-typography-tab-mini, $comp-radio-sizing-tab-height-mini);
+    @include radio-button-sizing(
+    var(--comp-radio-typography-tab-mini),
+    var(--comp-radio-sizing-tab-height-mini)
+    );
   }
 
   // active
   &.is-active {
     .el-radio-button__inner {
-      color: $comp-radio-color-tab-text-selected;
-      background-color: $comp-radio-color-tab-background-selected;
-      border: $comp-radio-border-button-selected;
+      color: var(--comp-radio-color-tab-text-selected);
+      background-color: var(--comp-radio-color-tab-background-selected);
+      border: var(--comp-radio-border-button-selected);
     }
   }
 
   // disabled
   &.is-disabled {
-    opacity: $comp-radio-opacity-disabled;
+    opacity: var(--comp-radio-opacity-disabled);
   }
 
   // border radius
@@ -168,12 +180,12 @@
   }
   &:first-child {
     .el-radio-button__inner {
-      border-radius: $comp-radio-border-radius-tab 0 0 $comp-radio-border-radius-tab;
+      border-radius: var(--comp-radio-border-radius-tab) 0 0 var(--comp-radio-border-radius-tab);
     }
   }
   &:last-child {
     .el-radio-button__inner {
-      border-radius: 0 $comp-radio-border-radius-tab $comp-radio-border-radius-tab 0;
+      border-radius: 0 var(--comp-radio-border-radius-tab) var(--comp-radio-border-radius-tab) 0;
     }
   }
 }

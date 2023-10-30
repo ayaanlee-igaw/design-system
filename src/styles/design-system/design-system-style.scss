@@ -10,7 +10,6 @@
 @import 'design-token/spacing';
 @import 'design-token/typography';
 @import 'design-token/box-shadow';
-@import 'custom-token';
 @import 'animation';
 
 // design-system css
@@ -25,4 +24,6 @@
 @import 'design-token-css/spacing';
 @import 'design-token-css/typography';
 @import 'design-token-css/box-shadow';
-//@import 'custom-token';
+
+// custom token
+@import 'custom-token';

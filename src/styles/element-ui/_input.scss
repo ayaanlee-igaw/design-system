@@ -61,18 +61,18 @@
 .el-textarea {
   // default setting
   .el-textarea__inner {
-    color: $comp-input-color-text-active;
-    background-color: $comp-input-color-background;
-    border: $comp-input-border-default;
-    border-radius: $comp-input-border-radius-default;
+    color: var(--comp-input-color-text-active);
+    background-color: var(--comp-input-color-background);
+    border: var(--comp-input-border-default);
+    border-radius: var(--comp-input-border-radius-default);
     box-shadow: none;
     &::placeholder {
-      color: $comp-input-color-text-placeholder;
+      color: var(--comp-input-color-text-placeholder);
     }
 
     // focus
     &:focus {
-      border: $comp-input-border-active;
+      border: var(--comp-input-border-active);
       box-shadow: none;
     }
   }
@@ -80,7 +80,7 @@
   // hover
   &:not(.is-disabled) {
     .el-textarea__inner:not(:focus):hover {
-      border: $comp-input-border-hover;
+      border: var(--comp-input-border-hover);
       box-shadow: none;
     }
   }
@@ -88,28 +88,28 @@
   // disabled
   &.is-disabled {
     .el-textarea__inner {
-      opacity: $comp-input-opacity-disabled;
-      background-color: $comp-input-color-background-disabled;
+      opacity: var(--comp-input-opacity-disabled);
+      background-color: var(--comp-input-color-background-disabled);
       box-shadow: none;
     }
   }
 
   // count
   .el-input__count {
-    font: $comp-input-typography-sub-text;
-    color: $comp-input-color-text-sub;
+    font: var(--comp-input-typography-sub-text);
+    color: var(--comp-input-color-text-sub);
   }
 
   // sizing
-  @include textarea-sizing($comp-input-typography-large);
+  @include textarea-sizing(var(--comp-input-typography-large));
   &.el-input--medium {
-    @include textarea-sizing($comp-input-typography-medium);
+    @include textarea-sizing(var(--comp-input-typography-medium));
   }
   &.el-input--small {
-    @include textarea-sizing($comp-input-typography-small);
+    @include textarea-sizing(var(--comp-input-typography-small));
   }
   &.el-input--mini {
-    @include textarea-sizing($comp-input-typography-mini);
+    @include textarea-sizing(var(--comp-input-typography-mini));
   }
 }
 
@@ -117,40 +117,40 @@
 .el-input {
   // default padding
   .el-input__wrapper {
-    padding: 0 $comp-input-spacing-horizontal;
+    padding: 0 var(--comp-input-spacing-horizontal);
 
     // prefix margin
     .el-input__prefix {
       .el-input__prefix-inner > .el-input__icon {
-        margin-right: $comp-input-spacing-prefixicon-right;
+        margin-right: var(--comp-input-spacing-prefixicon-right);
       }
     }
     // suffix margin
     .el-input__suffix {
       .el-input__suffix-inner > .el-input__icon {
-        margin-left: $comp-input-spacing-prefixicon-right;
+        margin-left: var(--comp-input-spacing-prefixicon-right);
       }
     }
 
     // count
     .el-input__count {
       .el-input__count-inner {
-        font: $comp-input-typography-sub-text;
-        color: $comp-input-color-text-sub;
+        font: var(--comp-input-typography-sub-text);
+        color: var(--comp-input-color-text-sub);
       }
     }
   }
 
   // default setting
   .el-input__wrapper {
-    background-color: $comp-input-color-background;
-    border: $comp-input-border-default;
-    border-radius: $comp-input-border-radius-default;
+    background-color: var(--comp-input-color-background);
+    border: var(--comp-input-border-default);
+    border-radius: var(--comp-input-border-radius-default);
     box-shadow: none;
     .el-input__inner {
-      color: $comp-input-color-text-active;
+      color: var(--comp-input-color-text-active);
       &::placeholder {
-        color: $comp-input-color-text-placeholder;
+        color: var(--comp-input-color-text-placeholder);
       }
     }
   }
@@ -158,56 +158,56 @@
   // hover
   &:not(.is-disabled) {
     .el-input__wrapper:not(.is-focus):hover {
-      border: $comp-input-border-hover;
+      border: var(--comp-input-border-hover);
       box-shadow: none;
     }
   }
 
   // focus
   .el-input__wrapper.is-focus {
-    border: $comp-input-border-active;
+    border: var(--comp-input-border-active);
     box-shadow: none;
   }
 
   // disabled
   &.is-disabled {
     .el-input__wrapper {
-      opacity: $comp-input-opacity-disabled;
-      background-color: $comp-input-color-background-disabled;
-      border: $comp-input-border-default;
+      opacity: var(--comp-input-opacity-disabled);
+      background-color: var(--comp-input-color-background-disabled);
+      border: var(--comp-input-border-default);
       box-shadow: none;
     }
   }
 
   // sizing
   @include input-sizing(
-      $comp-input-sizing-height-large,
-      $comp-input-typography-large,
-      $comp-input-sizing-icon-large,
-      $comp-input-spacing-slot-button-horizontal-large
+  var(--comp-input-sizing-height-large),
+  var(--comp-input-typography-large),
+  var(--comp-input-sizing-icon-large),
+  var(--comp-input-spacing-slot-button-horizontal-large)
   );
   &.el-input--medium {
     @include input-sizing(
-        $comp-input-sizing-height-medium,
-        $comp-input-typography-medium,
-        $comp-input-sizing-icon-medium,
-        $comp-input-spacing-slot-button-horizontal-medium
+    var(--comp-input-sizing-height-medium),
+    var(--comp-input-typography-medium),
+    var(--comp-input-sizing-icon-medium),
+    var(--comp-input-spacing-slot-button-horizontal-medium)
     );
   }
   &.el-input--small {
     @include input-sizing(
-        $comp-input-sizing-height-small,
-        $comp-input-typography-small,
-        $comp-input-sizing-icon-small,
-        $comp-input-spacing-slot-button-horizontal-small
+    var(--comp-input-sizing-height-small),
+    var(--comp-input-typography-small),
+    var(--comp-input-sizing-icon-small),
+    var(--comp-input-spacing-slot-button-horizontal-small)
     );
   }
   &.el-input--mini {
     @include input-sizing(
-        $comp-input-sizing-height-mini,
-        $comp-input-typography-mini,
-        $comp-input-sizing-icon-mini,
-        $comp-input-spacing-slot-button-horizontal-mini
+    var(--comp-input-sizing-height-mini),
+    var(--comp-input-typography-mini),
+    var(--comp-input-sizing-icon-mini),
+    var(--comp-input-spacing-slot-button-horizontal-mini)
     );
   }
 
@@ -216,23 +216,23 @@
     // prepend, append border radius
     &.el-input-group--prepend {
       .el-input__wrapper {
-        border-radius: 0 $comp-input-border-radius-default $comp-input-border-radius-default 0;
+        border-radius: 0 var(--comp-input-border-radius-default) var(--comp-input-border-radius-default) 0;
       }
       .el-input-group__prepend {
-        border-radius: $comp-input-border-radius-default 0 0 $comp-input-border-radius-default;
+        border-radius: var(--comp-input-border-radius-default) 0 0 var(--comp-input-border-radius-default);
         .el-button {
-          border-radius: $comp-input-border-radius-default 0 0 $comp-input-border-radius-default;
+          border-radius: var(--comp-input-border-radius-default) 0 0 var(--comp-input-border-radius-default);
         }
       }
     }
     &.el-input-group--append {
       .el-input__wrapper {
-        border-radius: $comp-input-border-radius-default 0 0 $comp-input-border-radius-default;
+        border-radius: var(--comp-input-border-radius-default) 0 0 var(--comp-input-border-radius-default);
       }
       .el-input-group__append {
-        border-radius: 0 $comp-input-border-radius-default $comp-input-border-radius-default 0;
+        border-radius: 0 var(--comp-input-border-radius-default) var(--comp-input-border-radius-default) 0;
         .el-button {
-          border-radius: 0 $comp-input-border-radius-default $comp-input-border-radius-default 0;
+          border-radius: 0 var(--comp-input-border-radius-default) var(--comp-input-border-radius-default) 0;
         }
       }
     }
@@ -247,9 +247,9 @@
   &.el-input-group {
     .el-input-group__prepend,
     .el-input-group__append {
-      padding: 0 $comp-input-spacing-slot-plaintext-horizontal;
-      color: $comp-input-color-slot-button-text;
-      background-color: $comp-input-color-slot-plaintext-background;
+      padding: 0 var(--comp-input-spacing-slot-plaintext-horizontal);
+      color: var(--comp-input-color-slot-button-text);
+      background-color: var(--comp-input-color-slot-plaintext-background);
       //box-shadow: none;
       .el-button {
         display: flex;
@@ -259,7 +259,7 @@
         height: 100%;
         &:not(:active):not(:focus),
         &:not(:active):focus:hover {
-          border: $comp-select-border-default;
+          border: var(--comp-select-border-default);
         }
       }
     }
@@ -274,12 +274,12 @@
         .el-select {
           margin-left: -$comp-input-spacing-slot-plaintext-horizontal;
           margin-right: -$comp-input-spacing-slot-plaintext-horizontal;
-          background-color: $comp-input-color-background;
+          background-color: var(--comp-input-color-background);
           .el-input {
             .el-input__wrapper {
               box-shadow: none !important;
               &.is-focus {
-                border: $comp-select-border-selected;
+                border: var(--comp-select-border-selected);
                 box-shadow: none;
               }
             }
@@ -287,32 +287,25 @@
             &.is-focus {
               .el-input__wrapper,
               .el-input__wrapper.is-focus {
-                border: $comp-select-border-selected;
+                border: var(--comp-select-border-selected);
               }
             }
           }
-          //.el-input--suffix,
-          //.el-input--prefix {
-          //  .el-input__wrapper {
-          //    padding: 0 $comp-select-spacing-horizontal;
-          //    width: $comp-select-sizing-mixed-input-width-small;
-          //  }
-          //}
         }
       }
       .el-input-group__prepend {
         .el-select {
           .el-input__wrapper {
-            border: $comp-select-border-default;
-            border-radius: $comp-input-border-radius-default 0 0 $comp-input-border-radius-default;
+            border: var(--comp-select-border-default);
+            border-radius: var(--comp-input-border-radius-default) 0 0 var(--comp-input-border-radius-default);
           }
         }
       }
       .el-input-group__append {
         .el-select {
           .el-input__wrapper {
-            border: $comp-select-border-default;
-            border-radius: 0 $comp-input-border-radius-default $comp-input-border-radius-default 0;
+            border: var(--comp-select-border-default);
+            border-radius: 0 var(--comp-input-border-radius-default) var(--comp-input-border-radius-default) 0;
           }
         }
       }
@@ -326,14 +319,14 @@
   &:not(.is-disabled) {
     .el-input-number__decrease,
     .el-input-number__increase {
-      color: $comp-input-color-slot-button-icon;
-      background-color: $comp-input-color-slot-button-background;
+      color: var(--comp-input-color-slot-button-icon);
+      background-color: var(--comp-input-color-slot-button-background);
       &:not(.is-disabled):hover {
-        color: $comp-input-color-slot-button-icon-active;
+        color: var(--comp-input-color-slot-button-icon-active);
       }
       &:hover + .el-input {
         .el-input__wrapper:not(.is-focus) {
-          border: $comp-input-border-hover;
+          border: var(--comp-input-border-hover);
         }
       }
       &:hover~.el-input:not(.is-disabled) {
@@ -343,7 +336,7 @@
       }
       &.is-disabled {
         .el-icon {
-          opacity: $comp-input-opacity-disabled;
+          opacity: var(--comp-input-opacity-disabled);
         }
       }
     }
@@ -361,15 +354,31 @@
   }
 
   // Button sizing
-  @include input-number-button-sizing($comp-input-sizing-number-width-large, $comp-input-sizing-height-large, $comp-input-sizing-slot-button-height-large);
+  @include input-number-button-sizing(
+  var(--comp-input-sizing-number-width-large),
+  var(--comp-input-sizing-height-large),
+  var(--comp-input-sizing-slot-button-height-large)
+  );
   &.el-input--medium {
-    @include input-number-button-sizing($comp-input-sizing-number-width-medium, $comp-input-sizing-height-medium, $comp-input-sizing-slot-button-height-medium);
+    @include input-number-button-sizing(
+    var(--comp-input-sizing-number-width-medium),
+    var(--comp-input-sizing-height-medium),
+    var(--comp-input-sizing-slot-button-height-medium)
+    );
   }
   &.el-input--small {
-    @include input-number-button-sizing($comp-input-sizing-number-width-small, $comp-input-sizing-height-small, $comp-input-sizing-slot-button-height-small);
+    @include input-number-button-sizing(
+    var(--comp-input-sizing-number-width-small),
+    var(--comp-input-sizing-height-small),
+    var(--comp-input-sizing-slot-button-height-small)
+    );
   }
   &.el-input--mini {
-    @include input-number-button-sizing($comp-input-sizing-number-width-mini, $comp-input-sizing-height-mini, $comp-input-sizing-slot-button-height-mini);
+    @include input-number-button-sizing(
+    var(--comp-input-sizing-number-width-mini),
+    var(--comp-input-sizing-height-mini),
+    var(--comp-input-sizing-slot-button-height-mini)
+    );
   }
 }
 

@@ -1,16 +1,16 @@
 .el-badge {
   .el-badge__content {
-    padding: 0 $comp-badge-spacing-horizontal;
-    height: $comp-badge-sizing-medium;
-    font: $comp-badge-typography-text;
+    padding: 0 var(--comp-badge-spacing-horizontal);
+    height: var(--comp-badge-sizing-medium);
+    font: var(--comp-badge-typography-text);
     border: none;
-    border-radius: $comp-badge-border-radius-rounded;
+    border-radius: var(--comp-badge-border-radius-rounded);
 
     // dot
     &.is-dot {
       padding: 0;
-      width: $comp-badge-sizing-dot;
-      height: $comp-badge-sizing-dot;
+      width: var(--comp-badge-sizing-dot);
+      height: var(--comp-badge-sizing-dot);
     }
 
     // fixed
@@ -23,26 +23,26 @@
 
     // badge color
     &.el-badge__content--primary {
-      background-color: $comp-badge-color-primary;
+      background-color: var(--comp-badge-color-primary);
     }
     &.el-badge__content--success {
-      background-color: $comp-badge-color-green;
+      background-color: var(--comp-badge-color-green);
     }
     &.el-badge__content--info {
-      background-color: $comp-badge-color-mute;
+      background-color: var(--comp-badge-color-mute);
     }
     &.el-badge__content--warning {
-      background-color: $comp-badge-color-yellow;
+      background-color: var(--comp-badge-color-yellow);
     }
     &, &.el-badge__content--error {
-      background-color: $comp-badge-color-red;
+      background-color: var(--comp-badge-color-red);
     }
   }
 
   // custom class
   &.el-badge--flash {
     .el-badge__content {
-      animation: $comp-badge-flash-ease-2;
+      animation: var(--comp-badge-flash-ease-2);
     }
   }
 }

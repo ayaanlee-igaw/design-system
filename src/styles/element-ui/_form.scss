@@ -4,20 +4,20 @@
     // input
     .el-input {
       .el-input__wrapper {
-        border: $comp-input-border-error;
+        border: var(--comp-input-border-error);
       }
     }
 
     // textarea
     .el-textarea {
       .el-textarea__inner {
-        border: $comp-input-border-error;
+        border: var(--comp-input-border-error);
       }
     }
 
     .el-select-v2 {
       .el-select-v2__wrapper {
-        border: $comp-select-border-error;
+        border: var(--comp-select-border-error);
         box-shadow: none;
       }
     }
