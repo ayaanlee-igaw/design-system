@@ -4,6 +4,7 @@
     <Input />
     <Select />
     <Radio />
+    <Tooltip />
     <CheckBox />
     <Tag />
     <Badge />
@@ -20,4 +21,5 @@
   import Tag from "@/components/Tag/Tag.vue";
   import Badge from "@/components/Badge/Badge.vue";
   import Switch from "@/components/Switch/Switch.vue";
+  import Tooltip from "@/components/Tooltip/Tooltip.vue";
 </script>
