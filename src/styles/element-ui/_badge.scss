@@ -1,0 +1,73 @@
+.el-badge {
+  .el-badge__content {
+    padding: 0 $comp-badge-spacing-horizontal;
+    height: $comp-badge-sizing-medium;
+    font: $comp-badge-typography-text;
+    border-radius: $comp-badge-border-radius-rounded;
+
+    // dot
+    &.is-dot {
+      padding: 0;
+      width: $comp-badge-sizing-dot;
+      height: $comp-badge-sizing-dot;
+    }
+
+    // fixed
+    //&.is-fixed {
+    //  right: 10px;
+    //}
+    //&.is-fixed.is-dot {
+    //  right: 6px;
+    //}
+
+    // badge color
+    &.el-badge__content--primary {
+      background-color: $comp-badge-color-primary;
+    }
+    &.el-badge__content--success {
+      background-color: $comp-badge-color-green;
+    }
+    &.el-badge__content--info {
+      background-color: $comp-badge-color-mute;
+    }
+    &.el-badge__content--warning {
+      background-color: $comp-badge-color-yellow;
+    }
+    &, &.el-badge__content--error {
+      background-color: $comp-badge-color-red;
+    }
+  }
+
+  // custom class
+  &.el-badge--flash {
+    .el-badge__content {
+      animation: $comp-badge-flash-ease-2;
+    }
+  }
+}
+
+//.el-badge__content {
+//  min-width: 20px;
+//  height: 20px;
+//
+//  &.is-fixed {
+//    right: 10px;
+//  }
+//}
+//
+//.el-badge__content.is-dot {
+//  min-width: 0;
+//  width: 12px;
+//  height: 12px;
+//
+//  &.is-fixed {
+//    right: 6px;
+//  }
+//}
+//
+//.el-badge--flash {
+//  .el-badge__content {
+//    animation: flash 2s infinite ease-in-out;
+//  }
+//}
+

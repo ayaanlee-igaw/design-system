@@ -1,0 +1,40 @@
+.el-slider {
+  .el-slider__runway {
+    height: $comp-slider-sizing-height-position;
+    background-color: $comp-slider-color-line;
+    border-radius: $comp-slider-border-radius-default;
+
+    // disabled
+    &.disabled {
+      .el-slider__bar {
+        background-color: $comp-slider-color-position-bar-disabled;
+      }
+      .el-slider__button-wrapper {
+        .el-slider__button {
+          border: $comp-slider-border-position-control-disabled;
+        }
+      }
+    }
+
+    // slider bar
+    .el-slider__bar {
+      height: 100%;
+      background-color: $comp-slider-color-position-bar;
+      border-radius: $comp-slider-border-radius-default;
+    }
+    // slider circle
+    .el-slider__button-wrapper {
+      .el-slider__button {
+        width: $comp-slider-sizing-position-control;
+        height: $comp-slider-sizing-position-control;
+        border: $comp-slider-border-position-control;
+      }
+    }
+    // slider stop dot
+    .el-slider__stop {
+      width: $comp-slider-sizing-dash-dot;
+      height: $comp-slider-sizing-dash-dot;
+      background-color: $comp-slider-color-dash-dot;
+    }
+  }
+}

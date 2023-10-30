@@ -1,0 +1,83 @@
+// element ui 내부적으로 el-input 사용
+// input.scss 파일 참고
+.el-cascader {
+  .el-input {
+    .el-input__inner {
+      padding: 0 $comp-select-spacing-horizontal;
+    }
+
+    // focus
+    &.is-focus {
+      .el-input__inner {
+        border: $comp-select-border-selected;
+      }
+    }
+  }
+}
+
+// cascader dropdown
+.el-cascader__dropdown {
+  background-color: $comp-cascader-color-popper-background;
+  border: $comp-cascader-border-popper-outline;
+  border-radius: $comp-cascader-border-radius-popper-default;
+  box-shadow: $comp-cascader-boxshadow-popper;
+
+  .el-cascader-panel {
+    .el-cascader-menu {
+      // cascader menu divider
+      &:not(:last-child) {
+        border-right: $comp-cascader-border-popper-divider;
+      }
+
+      .el-cascader-menu__wrap {
+        .el-cascader-menu__list {
+          padding: $comp-cascader-spacing-popper-vertical-list 0;
+          .el-cascader-node {
+            padding: $comp-cascader-spacing-list-vertical $comp-cascader-spacing-list-horizontal;
+            font: $comp-cascader-typography-list-text;
+            color: $comp-cascader-color-list-text;
+
+            // cascader postfix
+            .el-cascader-node__postfix {
+              font-size: $comp-cascader-sizing-icon;
+            }
+
+            // cascader active
+            &.in-active-path,
+            &.is-active {
+              color: $comp-cascader-color-list-text-selected;
+            }
+
+            // cascader hover
+            &:hover {
+              background-color: $comp-scroll-item-color-item-background-hover;
+            }
+
+            // cascader disabled
+            &.is-disabled {
+              opacity: $comp-cascader-opacity-list-disabled;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// dropdown
+.el-cascader__dropdown {
+  @include layer-index('popover');
+}
+// popper
+.el-cascader-menus.el-popper{
+  @include layer-index('toast', 10);
+}
+
+//.el-cascader {
+//  .el-cascader__tags {
+//    align-items: center;
+//    .el-tag__close {
+//      top: 0;
+//    }
+//  }
+//}

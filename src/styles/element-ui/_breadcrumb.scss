@@ -1,0 +1,19 @@
+.el-breadcrumb {
+  .el-breadcrumb__item {
+    font: $comp-breadcrumb-typography-sub-title;
+    color: $comp-breadcrumb-color-sub-title;
+
+    &.is-link {
+      font: $comp-breadcrumb-typography-main-title;
+      color: $comp-breadcrumb-color-main-title;
+    }
+
+    // breadcrumb separator
+    .el-breadcrumb__separator {
+      margin: 0 $comp-breadcrumb-spacing-horizontal-basic;
+    }
+    i.el-breadcrumb__separator {
+      margin: 0 $comp-breadcrumb-spacing-horizontal-icon;
+    }
+  }
+}

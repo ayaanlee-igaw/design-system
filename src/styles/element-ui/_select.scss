@@ -1,0 +1,210 @@
+// select sizing mixin
+@mixin select-sizing($height, $font, $suffix-size) {
+  .el-input {
+    .el-input__wrapper {
+      height: $height;
+      font: $font;
+      &::placeholder {
+        font: $font;
+      }
+    }
+
+    &.el-input--suffix {
+      .el-input__suffix {
+        .el-input__suffix-inner {
+          i {
+            font-size: $suffix-size;
+            &::before {
+              font-size: $suffix-size;
+              width: $suffix-size;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// element ui 내부적으로 el-input 사용
+// input.scss 파일 참고
+.el-select {
+  &:hover, &.is-focus {
+    .el-input {
+      .el-input__wrapper {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .el-input {
+    // default
+    .el-input__wrapper {
+      padding: 0 $comp-select-spacing-horizontal;
+      //border: $comp-select-border-default;
+      //border-radius: $comp-select-border-radius-default;
+      //&::placeholder {
+      //  color: $comp-select-color-text-placeholder;
+      //}
+    }
+
+    // focus
+    &.is-focus {
+      .el-input__wrapper {
+        border: $comp-select-border-selected;
+        box-shadow: none !important;
+      }
+    }
+    .el-input__wrapper.is-focus {
+      box-shadow: none !important;
+    }
+  }
+
+  // selest sizing
+  @include select-sizing(
+      $comp-select-sizing-height-large,
+      $comp-select-typography-large,
+      $comp-select-sizing-icon-large
+  );
+  &.el-select--medium {
+    @include select-sizing(
+        $comp-select-sizing-height-medium,
+        $comp-select-typography-medium,
+        $comp-select-sizing-icon-medium
+    );
+  }
+  &.el-select--small {
+    @include select-sizing(
+        $comp-select-sizing-height-small,
+        $comp-select-typography-small,
+        $comp-select-sizing-icon-small
+    );
+  }
+  &.el-select--mini {
+    @include select-sizing(
+        $comp-select-sizing-height-mini,
+        $comp-select-typography-mini,
+        $comp-select-sizing-icon-mini
+    );
+  }
+
+  // select tags
+
+
+  // select tag sizing
+  // select 크기에 상관 없이 tag small로 바인딩 되는 문제점 해결
+  .el-select__tags {
+    .el-tag {
+      @include tag-sizing(
+          $comp-tag-spacing-horizontal-large,
+          $comp-tag-sizing-height-large,
+          $comp-tag-typography-text-large
+      );
+    }
+  }
+  &.el-select--medium {
+    .el-select__tags {
+      .el-tag {
+        @include tag-sizing(
+            $comp-tag-spacing-horizontal-medium,
+            $comp-tag-sizing-height-medium,
+            $comp-tag-typography-text-medium
+        );
+      }
+    }
+  }
+  &.el-select--small {
+    .el-select__tags {
+      .el-tag {
+        @include tag-sizing(
+            $comp-tag-spacing-horizontal-small,
+            $comp-tag-sizing-height-small,
+            $comp-tag-typography-text-small
+        );
+      }
+    }
+  }
+  &.el-select--mini {
+    .el-select__tags {
+      .el-tag {
+        @include tag-sizing(
+            $comp-tag-spacing-horizontal-mini,
+            $comp-tag-sizing-height-mini,
+            $comp-tag-typography-text-mini
+        );
+      }
+    }
+  }
+}
+
+// select dropdown
+.el-select-dropdown {
+  $padding-right-with-check-icon: $comp-scroll-item-spacing-item-horizontal + $comp-scroll-item-sizing-item-icon + $comp-scroll-item-spacing-item-gap;
+  background-color: $comp-scroll-item-color-background;
+  border: none;
+  border-radius: $comp-scroll-item-border-radius-default;
+  box-shadow: $comp-scroll-item-opacity-list;
+
+  .el-scrollbar {
+    .el-select-dropdown__wrap {
+      .el-select-dropdown__list {
+        padding: $comp-scroll-item-spacing-vertical 0;
+        .el-select-dropdown__item {
+          display: flex;
+          align-items: center;
+          padding: $comp-scroll-item-spacing-item-vertical $padding-right-with-check-icon $comp-scroll-item-spacing-item-vertical $comp-scroll-item-spacing-item-horizontal;
+          font: $comp-scroll-item-typography-item-text;
+          color: $comp-scroll-item-color-item-text;
+          background-color: $comp-scroll-item-color-item-background;
+
+          // dropdown item check ui
+          &::after {
+            right: $comp-scroll-item-spacing-item-horizontal;
+            font-size: $comp-scroll-item-sizing-item-icon;
+          }
+
+          // dropdown item selected
+          &.selected {
+            span {
+              font: $comp-scroll-item-typography-item-text-selected;
+              color: $comp-scroll-item-color-item-text-selected;
+            }
+          }
+
+          // dropdown item hover
+          &:not(.is-disabled):hover {
+            background-color: $comp-scroll-item-color-item-background-hover;
+          }
+
+          // dropdown item disabled
+          &.is-disabled {
+            opacity: $comp-scroll-item-opacity-item-disabled;
+          }
+        }
+
+        // dropdown group
+        .el-select-group__wrap {
+          &::after {
+            left: $comp-scroll-item-spacing-item-horizontal;
+            right: $comp-scroll-item-spacing-item-horizontal;
+            background-color: $comp-border-color-divider;
+          }
+          .el-select-group__title {
+            padding: $comp-scroll-item-spacing-item-vertical $comp-scroll-item-spacing-item-horizontal;
+            font: $comp-scroll-item-typography-item-title;
+            color: $comp-scroll-item-color-item-text-title;
+            background-color: $comp-scroll-item-color-item-background;
+          }
+        }
+      }
+    }
+  }
+}
+
+// dropdown
+.el-select-dropdown {
+  @include layer-index('popover');
+
+  .el-select & {
+    @include layer-index('inline-popover');
+  }
+}

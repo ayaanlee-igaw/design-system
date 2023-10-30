@@ -1,0 +1,317 @@
+// radio bordered sizing mixin
+@mixin radio-bordered-sizing($height, $font, $selected-font) {
+  height: $height;
+  .el-radio__label {
+    font: $font;
+  }
+  &.is-checked {
+    .el-radio__label {
+      font: $selected-font;
+    }
+  }
+}
+
+// radio button sizing mixin
+@mixin radio-button-sizing($font, $height) {
+  .el-radio-button__inner {
+    font: $font;
+    height: $height;
+  }
+}
+
+.el-radio {
+  // default
+  .el-radio__input {
+    .el-radio__inner {
+      width: $comp-radio-sizing-backgorund;
+      height: $comp-radio-sizing-backgorund;
+      border: $comp-radio-border-default;
+      &::after {
+        $radio-inner-circle-sizing: $comp-radio-sizing-backgorund - $comp-radio-border-width-selected*2;
+        width: $radio-inner-circle-sizing;
+        height: $radio-inner-circle-sizing;
+      }
+    }
+  }
+  .el-radio__label {
+    padding-left: $comp-radio-spacing-radio-right;
+    font: $comp-radio-typography-text-large;
+    color: $comp-radio-color-text-base;
+  }
+
+  // radio circle color
+  .el-radio__inner {
+    background-color: $comp-radio-color-background;
+    &::after {
+      background-color: $comp-radio-color-background;
+    }
+  }
+  &.is-disabled {
+    opacity: $comp-radio-opacity-disabled;
+    .el-radio__inner {
+      background-color: $comp-radio-color-background;
+      &::after {
+        background-color: $comp-radio-color-background;
+      }
+    }
+  }
+
+  // checked
+  &.is-checked {
+    .el-radio__input {
+      .el-radio__inner {
+        background-color: $comp-radio-color-tab-outline-selected;
+        border: $comp-radio-border-selected;
+      }
+    }
+    .el-radio__label {
+      padding-left: $comp-radio-spacing-radio-right;
+      font: $comp-radio-typography-text-large-selected;
+      color: $comp-radio-color-text-selected;
+    }
+  }
+
+  // radio bordered
+  &.is-bordered {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 $comp-radio-spacing-button-horizontal;
+    color: $comp-radio-color-text-base;
+    background-color: $comp-radio-color-background;
+    border: $comp-radio-border-button-default;
+    border-radius: $comp-radio-border-radius-button;
+    &.is-checked {
+      color: $comp-radio-color-text-selected;
+      border: $comp-radio-border-button-selected;
+    }
+
+    // radio bordered sizing
+    @include radio-bordered-sizing(
+        $comp-radio-sizing-button-height-large,
+        $comp-radio-typography-text-large,
+        $comp-radio-typography-text-large-selected
+    );
+    &.el-radio--medium {
+      @include radio-bordered-sizing(
+          $comp-radio-sizing-button-height-medium,
+          $comp-radio-typography-text-medium,
+          $comp-radio-typography-text-medium-selected
+      );
+    }
+    &.el-radio--small {
+      @include radio-bordered-sizing(
+          $comp-radio-sizing-button-height-small,
+          $comp-radio-typography-text-small,
+          $comp-radio-typography-text-small-selected
+      );
+    }
+    &.el-radio--mini {
+      @include radio-bordered-sizing(
+          $comp-radio-sizing-button-height-mini,
+          $comp-radio-typography-text-mini,
+          $comp-radio-typography-text-mini-selected
+      );
+    }
+  }
+}
+
+// radio button
+.el-radio-button {
+  .el-radio-button__inner {
+    display: flex;
+    align-items: center;
+    padding: 0 $comp-radio-spacing-tab-horizontal;
+    color: $comp-radio-color-tab-text;
+    background-color: $comp-radio-color-tab-background;
+    border: $comp-radio-border-button-default;
+    border-radius: $comp-radio-border-radius-tab;
+  }
+
+  // radio button sizing
+  @include radio-button-sizing($comp-radio-typography-tab-large, $comp-radio-sizing-tab-height-large);
+  &.el-radio-button--medium {
+    @include radio-button-sizing($comp-radio-typography-tab-medium, $comp-radio-sizing-tab-height-medium);
+  }
+  &.el-radio-button--small {
+    @include radio-button-sizing($comp-radio-typography-tab-small, $comp-radio-sizing-tab-height-small);
+  }
+  &.el-radio-button--mini {
+    @include radio-button-sizing($comp-radio-typography-tab-mini, $comp-radio-sizing-tab-height-mini);
+  }
+
+  // active
+  &.is-active {
+    .el-radio-button__inner {
+      color: $comp-radio-color-tab-text-selected;
+      background-color: $comp-radio-color-tab-background-selected;
+      border: $comp-radio-border-button-selected;
+    }
+  }
+
+  // disabled
+  &.is-disabled {
+    opacity: $comp-radio-opacity-disabled;
+  }
+
+  &:first-child {
+    .el-radio-button__inner {
+      border-radius: $comp-radio-border-radius-tab 0 0 $comp-radio-border-radius-tab;
+    }
+  }
+  &:last-child {
+    .el-radio-button__inner {
+      border-radius: 0 $comp-radio-border-radius-tab $comp-radio-border-radius-tab 0;
+    }
+  }
+}
+
+//.el-radio-group {
+//  &.button-radio {
+//    display: flex;
+//    background-color: $--color-achromatic1;
+//
+//    .el-radio {
+//      flex-grow: 1;
+//      padding: 12px 15px;
+//      margin: 0;
+//      border-top: 1px solid $--color-achromatic3;
+//      border-left: 1px solid $--color-achromatic3;
+//      border-bottom: 1px solid $--color-achromatic3;
+//      &:first-child {
+//        border-top-left-radius: 3px;
+//        border-bottom-left-radius: 3px;
+//      }
+//      &:last-child {
+//        border-right: 1px solid $--color-achromatic3;
+//        border-top-right-radius: 3px;
+//        border-bottom-right-radius: 3px;
+//      }
+//
+//      &.is-checked {
+//        background-color: $--color-white;
+//        border-radius: 3px;
+//        border: 1px solid $--color-primary;
+//      }
+//    }
+//  }
+//}
+
+//$height-large: 40px;
+//$height-medium: 36px;
+//$height-small: 32px;
+//$height-mini: 28px;
+//$height-default: $height-large;
+//
+//$font-size-large: 14px;
+//$font-size-medium: 14px;
+//$font-size-small: 13px;
+//$font-size-mini: 12px;
+//$font-size-default: $font-size-large;
+
+//@each $element in ('checkbox', 'radio') {
+//  .el-#{$element} {
+//    //font-size: $font-size-default;
+//    line-height: 1;
+//    vertical-align: 0;
+//
+//    .el-#{$element}-group--block & {
+//      height: 30px;
+//      line-height: 30px;
+//      padding: 0 15px;
+//      display: block;
+//      margin: 0;
+//    }
+//  }
+//
+//  .el-#{$element}__inner {
+//    transition: $--color-transition;
+//  }
+//
+//  .el-#{$element}.is-bordered {
+//    height: $height-default;
+//    line-height: calc(#{$height-default} - 2px);
+//    font-size: $font-size-default;
+//    padding: 0 20px 0 10px;
+//    color: $--color-achromatic7;
+//    border-color: $--color-achromatic4;
+//    background-color: $--color-white;
+//
+//    // element-ui 스타일 오류
+//    padding-top: 0 !important;
+//    padding-bottom: 0 !important;
+//  }
+//
+//  .el-#{$element}--medium.is-bordered {
+//    height: $height-medium;
+//    line-height: calc(#{$height-medium} - 2px);
+//    font-size: $font-size-medium;
+//  }
+//
+//  .el-#{$element}--small.is-bordered {
+//    height: $height-small;
+//    line-height: calc(#{$height-small} - 2px);
+//    font-size: $font-size-small;
+//    padding-right: 15px;
+//  }
+//
+//  .el-#{$element}--mini.is-bordered {
+//    height: $height-mini;
+//    line-height: calc(#{$height-mini} - 2px);
+//    font-size: $font-size-mini;
+//    padding-right: 15px;
+//  }
+//
+//  .el-#{$element}__input,
+//  .el-#{$element}__label {
+//    font-size: inherit;
+//    line-height: 1;
+//    vertical-align: middle;
+//  }
+//
+//  .el-#{$element}__inner {
+//    vertical-align: -1px;
+//  }
+//
+//  .el-radio-button__inner {
+//    height: $height-default;
+//    line-height: calc(#{$height-default} - 2px);
+//    font-size: $font-size-default;
+//    padding: 0 20px;
+//
+//    // element-ui 스타일 오류
+//    padding-top: 0 !important;
+//    padding-bottom: 0 !important;
+//
+//    .el-#{$element}-button--medium & {
+//      height: $height-medium;
+//      line-height: calc(#{$height-medium} - 2px);
+//      font-size: $font-size-medium;
+//    }
+//
+//    .el-#{$element}-button--small & {
+//      height: $height-small;
+//      line-height: calc(#{$height-small} - 2px);
+//      font-size: $font-size-small;
+//    }
+//
+//    .el-#{$element}-button--mini & {
+//      height: $height-mini;
+//      line-height: calc(#{$height-mini} - 2px);
+//      font-size: $font-size-mini;
+//    }
+//  }
+//
+//  .el-#{$element}-group--full {
+//    display: flex;
+//    width: 100%;
+//
+//    .el-#{$element}-button {
+//      flex: 1 0;
+//    }
+//
+//    .el-#{$element}-button__inner {
+//      width: 100%;
+//      text-align: center;
+//    }
+//  }
+//}

@@ -1,0 +1,13 @@
+.el-tooltip__popper {
+  &.is-dark {
+    padding: $comp-tooltip-spacing-tip;
+    font: $comp-tooltip-typography-text;
+    background-color: $comp-tooltip-color-background-tip;
+    border-radius: $comp-tooltip-border-radius-tip;
+  }
+  .popper__arrow {
+    &::after {
+      border-top-color: $comp-tooltip-color-background-tip;
+    }
+  }
+}

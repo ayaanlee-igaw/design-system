@@ -1,0 +1,14 @@
+$ref-boxshadow-0: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+$ref-boxshadow-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+$ref-boxshadow-2: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+$ref-boxshadow-3: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+$sys-boxshadow-level0: $ref-boxshadow-0;
+$sys-boxshadow-level1: $ref-boxshadow-1;
+$sys-boxshadow-level2: $ref-boxshadow-2;
+$sys-boxshadow-level3: $ref-boxshadow-3;
+$comp-cascader-boxshadow-popper: $ref-boxshadow-2;
+$comp-popover-boxshadow-default: $ref-boxshadow-3;
+$comp-scroll-item-opacity-list: $ref-boxshadow-2;
+$ui-boxshadow-low: $ref-boxshadow-1;
+$ui-boxshadow-high: $ref-boxshadow-2;
+$ui-boxshadow-higher: $ref-boxshadow-3;
