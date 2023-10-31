@@ -44,6 +44,7 @@
   </div>
 
   <div>
+    <el-button disabled>Default</el-button>
     <el-button type="primary" disabled>Primary</el-button>
     <el-button type="success" disabled>Success</el-button>
     <el-button type="info" disabled>Info</el-button>
@@ -52,6 +53,7 @@
   </div>
 
   <div>
+    <el-button plain disabled>Default</el-button>
     <el-button type="primary" plain disabled>Primary</el-button>
     <el-button type="success" plain disabled>Success</el-button>
     <el-button type="info" plain disabled>Info</el-button>
@@ -60,6 +62,7 @@
   </div>
 
   <div>
+    <el-button plain round disabled>Default</el-button>
     <el-button type="primary" plain round disabled>Primary</el-button>
     <el-button type="success" plain round disabled>Success</el-button>
     <el-button type="info" plain round disabled>Info</el-button>
@@ -85,12 +88,36 @@
     <el-button class="is-square" type="danger">D</el-button>
   </div>
 
-  <!--      <div>-->
-  <!--        <el-Button link>Link Button</el-Button>-->
-  <!--      </div>-->
+  <div>
+    <el-button
+      v-for="button in buttons"
+      :class="button.class"
+      :key="button.text"
+      :type="button.type"
+      link>
+      {{ button.text }}
+    </el-button>
+
+    <el-button
+      v-for="button in buttons"
+      :key="button.text"
+      :type="button.type"
+      link
+      disabled>
+      {{ button.text }}
+    </el-button>
+  </div>
 </template>
 
 <script setup lang="ts">
+const buttons = [
+  { type: '', text: 'plain' },
+  { type: 'primary', text: 'primary', class: 'el-button--large' },
+  { type: 'success', text: 'success', class: 'el-button--medium' },
+  { type: 'info', text: 'info', class: 'el-button--small' },
+  { type: 'warning', text: 'warning', class: 'el-button--mini' },
+  { type: 'danger', text: 'danger' },
+] as const
 </script>
 
 <style scoped>

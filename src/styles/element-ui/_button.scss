@@ -19,7 +19,7 @@
   }
 }
 
-// Button color mixin
+// button color mixin
 @mixin button-color($color, $bg, $hover-bg, $pressed-bg, $border, $hover-border, $pressed-border) {
   color: $color;
   background-color: $bg;
@@ -43,12 +43,24 @@
   }
 }
 
+// link button color mixin
+@mixin link-button-color($color, $hover-color, $pressed-color) {
+  color: $color;
+  &:hover {
+    color: $hover-color;
+  }
+  &:active {
+    color: $pressed-color;
+  }
+}
+
 .el-button {
   // default
   transition: $comp-button-transition-ease-2;
   border-radius: var(--comp-button-border-radius-default);
 
-  // custom calss - full
+  // custom calss
+  // full
   &.is-full {
     width: var(--comp-button-sizing-width-100per);
   }
@@ -129,34 +141,8 @@
     );
   }
 
-  // text Button
-  // @todo type에 따른 정의
-  //&.el-Button--text {
-  //  padding: var(--comp-Button-spacing-none);
-  //  height: auto;
-  //  color: var(--comp-Button-color-text-primary);
-  //  background-color: transparent;
-  //  border-color: transparent;
-  //  &.is-disabled:hover {
-  //    color: var(--comp-Button-color-text-primary);
-  //    background-color: transparent;
-  //    border-color: transparent;
-  //  }
-  //  &:not(.is-disabled):hover,
-  //  &:not(.is-disabled):focus {
-  //    color: var(--comp-Button-color-text-primary-hover);
-  //    background-color: transparent;
-  //    border-color: transparent;
-  //    &:active {
-  //      color: var(--comp-Button-color-text-primary-pressed);
-  //      background-color: transparent;
-  //      border-color: transparent;
-  //    }
-  //  }
-  //}
-
   //  Button color
-  &, &.is-disabled {
+  &:not(.is-link) {
     @include button-color(
     var(--comp-button-color-text-base),
     var(--comp-button-color-background-base),
@@ -219,6 +205,46 @@
       var(--comp-button-border-container-error),
       var(--comp-button-border-container-error-hover),
       var(--comp-button-border-container-error-pressed)
+      );
+    }
+  }
+
+  // link button color
+  &.is-link {
+    padding: var(--comp-button-spacing-none);
+    &.el-button--primary {
+      @include link-button-color(
+      var(--comp-button-color-text-primary),
+      var(--comp-button-color-text-primary-hover),
+      var(--comp-button-color-text-primary-pressed)
+      );
+    }
+    &.el-button--success {
+      @include link-button-color(
+      var(--comp-button-color-text-success),
+      var(--comp-button-color-text-success-hover),
+      var(--comp-button-color-text-success-pressed)
+      );
+    }
+    &, &.el-button--info {
+      @include link-button-color(
+      var(--comp-button-color-text-secondary),
+      var(--comp-button-color-text-secondary-hover),
+      var(--comp-button-color-text-secondary-pressed)
+      );
+    }
+    &.el-button--warning {
+      @include link-button-color(
+      var(--comp-button-color-text-warning),
+      var(--comp-button-color-text-warning-hover),
+      var(--comp-button-color-text-warning-pressed)
+      );
+    }
+    &.el-button--danger {
+      @include link-button-color(
+      var(--comp-button-color-text-error),
+      var(--comp-button-color-text-error-hover),
+      var(--comp-button-color-text-error-pressed)
       );
     }
   }
