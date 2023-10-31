@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 80vw">
+  <div style="display: flex; flex-direction: column; gap: 20px;">
     <Button />
     <Input />
     <Select />
@@ -9,6 +9,7 @@
     <Tag />
     <Badge />
     <Switch />
+    <Dropdown />
   </div>
 </template>
 
@@ -22,4 +23,5 @@
   import Badge from "@/components/Badge/Badge.vue";
   import Switch from "@/components/Switch/Switch.vue";
   import Tooltip from "@/components/Tooltip/Tooltip.vue";
+  import Dropdown from "@/components/Dropdown/Dropdown.vue";
 </script>
