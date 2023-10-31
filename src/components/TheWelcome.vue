@@ -31,6 +31,8 @@
     <Upload />
     <hr class="my-4" />
     <Popover />
+    <hr class="my-4" />
+    <Dialog />
   </div>
 </template>
 
@@ -51,4 +53,5 @@
   import Progress from "@/components/Progress/Progress.vue";
   import Upload from "@/components/Upload/Upload.vue";
   import Popover from "@/components/Popover/Popover.vue";
+  import Dialog from "@/components/Dialog/Dialog.vue";
 </script>

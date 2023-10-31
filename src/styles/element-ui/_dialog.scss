@@ -1,53 +1,68 @@
-.el-dialog__wrapper {
-  .el-dialog {
-    border-radius: $comp-dialog-border-radius-default;
+// dialog
+.el-dialog {
+  border-radius: var(--comp-dialog-border-radius-default);
 
-    // header, body, footer padding
-    .el-dialog__header,
-    .el-dialog__body,
-    .el-dialog__footer {
-      padding: $comp-dialog-spacing-vertical $comp-dialog-spacing-horizontal;
+  // header, body, footer padding
+  .el-dialog__header,
+  .el-dialog__body,
+  .el-dialog__footer {
+    padding: var(--comp-dialog-spacing-vertical) var(--comp-dialog-spacing-horizontal);
+  }
+
+  // header
+  .el-dialog__header {
+    //margin: 0;
+    font: var(--comp-dialog-typography-title);
+    color: var(--comp-dialog-color-text-base);
+    background-color: var(--comp-dialog-color-background-default);
+    border-radius: var(--comp-dialog-border-radius-default) var(--comp-dialog-border-radius-default) 0 0;
+    .el-dialog__title {
+      font: var(--comp-dialog-typography-title);
+      color: var(--comp-dialog-color-text-base);
     }
+    .el-dialog__headerbtn {
+      top: 0;
+      right: var(--comp-dialog-spacing-horizontal);
+      width: var(--comp-dialog-sizing-title-icon-close);
+      .el-dialog__close {
+        font-size: var(--comp-dialog-sizing-title-icon-close);
+        color: var(--comp-dialog-color-text-base);
+      }
+    }
+  }
 
-    // header
+  // footer Button gap
+  .el-dialog__footer {
+    .el-button + .el-button {
+      margin-left: var(--comp-dialog-spacing-gap);
+    }
+    // dialog footer button small
+    .el-button {
+      @include button-sizing(
+      var(--comp-button-spacing-horizontal-small),
+      var(--comp-button-sizing-small),
+      var(--comp-button-typography-small),
+      var(--comp-button-sizing-icon-small)
+      );
+    }
+  }
+
+  // footer center
+  &.el-dialog--center {
+    .el-dialog__footer {
+      padding-bottom: calc(var(--comp-dialog-spacing-centered-content-button-bottom) + var(--comp-dialog-spacing-vertical));
+    }
+  }
+
+  // custom class hide
+  &.hide-header {
     .el-dialog__header {
-      font: $comp-dialog-typography-title;
-      color: $comp-dialog-color-text-base;
-      background-color: $comp-dialog-color-background-default;
-      .el-dialog__headerbtn {
-        width: $comp-dialog-sizing-title-icon-close;
-        .el-dialog__close {
-          font-size: $comp-dialog-sizing-title-icon-close;
-          color: $comp-dialog-color-text-base;
-        }
-      }
+      display: none;
     }
-
-    // footer Button gap
+  }
+  &.hide-footer {
     .el-dialog__footer {
-      .el-button + .el-button {
-        margin-left: $comp-dialog-spacing-gap;
-      }
-    }
-
-    // footer center
-    &.el-dialog--center {
-      $dialog-center-footer-padding-botton: $comp-dialog-spacing-vertical + $comp-dialog-spacing-centered-content-button-bottom;
-      .el-dialog__footer {
-        padding: $comp-dialog-spacing-vertical $comp-dialog-spacing-horizontal $dialog-center-footer-padding-botton $comp-dialog-spacing-horizontal;
-      }
-    }
-
-    // custom class hide
-    &.hide-header {
-      .el-dialog__header {
-        display: none;
-      }
-    }
-    &.hide-footer {
-      .el-dialog__footer {
-        display: none;
-      }
+      display: none;
     }
   }
 }
@@ -59,80 +74,3 @@
 .el-dialog__wrapper {
   @include layer-index('dialog', 20);
 }
-
-//$--modal-small-width: 300px;
-//$--modal-default-width: 500px;
-//$--modal-large-width: 800px;
-//$--modal-llarge-width: 1024px;
-//$--modal-extra-large: 1140px;
-
-
-//.el-dialog {
-//  width: $--modal-default-width;
-//
-//  &.sm {
-//    width: $--modal-small-width;
-//  }
-//
-//  &.lg {
-//    width: $--modal-large-width;
-//  }
-//  &.llg {
-//    width: $--modal-llarge-width;
-//  }
-//  &.xl {
-//    width: $--modal-extra-large;
-//  }
-//}
-
-//.el-dialog__wrapper {
-//  @include layer-index('dialog', 20);
-//
-//  .el-dialog {
-//    border-radius: 5px;
-//
-//    &.hide-header {
-//      .el-dialog__header {
-//        display: none;
-//      }
-//    }
-//
-//    &.hide-footer {
-//      .el-dialog__footer {
-//        display: none;
-//      }
-//    }
-//
-//    .el-dialog__header {
-//      padding: 15px 20px;
-//      border-bottom: 1px solid $--color-light;
-//      align-items: center;
-//      font-size: 18px;
-//      line-height: 32px;
-//      font-weight: $--font-weight-medium;
-//    }
-//
-//    .el-dialog__body {
-//      &:before, &:after {
-//        content: '';
-//        display: table;
-//        clear: both;
-//      }
-//
-//      &:before {
-//        margin-bottom: 20px;
-//      }
-//
-//      &:after {
-//        margin-top: 30px;
-//      }
-//
-//      padding: 0 20px;
-//    }
-//
-//    .el-dialog__footer {
-//      border-top: 1px solid $--color-light;
-//      padding: 10px 15px;
-//    }
-//  }
-//}

@@ -1,50 +1,57 @@
-.el-message-box__wrapper {
-  .el-message-box {
-    $dialog-close-position-top: 4px;
+// message box
+.el-message-box {
+  padding: 0;
 
-    // header, body, footer padding
-    .el-message-box__header,
-    .el-message-box__body,
-    .el-message-box__footer {
-      padding: $comp-dialog-spacing-vertical $comp-dialog-spacing-horizontal;
+  // header, body, footer padding
+  .el-message-box__header,
+  .el-message-box__body,
+  .el-message-box__btns {
+    padding: var(--comp-dialog-spacing-vertical) var(--comp-dialog-spacing-horizontal);
+  }
+
+  // header
+  .el-message-box__header {
+    font: var(--comp-dialog-typography-title);
+    color: var(--comp-dialog-color-text-base);
+    background-color: var(--comp-dialog-color-background-default);
+    .el-message-box__title {
+      font: var(--comp-dialog-typography-title);
+      color: var(--comp-dialog-color-text-base);
     }
+    .el-message-box__headerbtn {
+      top: var(--comp-dialog-spacing-vertical);
+      right: var(--comp-dialog-spacing-horizontal);
+      width: var(--comp-dialog-sizing-title-icon-close);
+      .el-message-box__close {
+        font-size: var(--comp-dialog-sizing-title-icon-close);
+        color: var(--comp-dialog-color-text-base);
+      }
+    }
+  }
 
-    // header
+  // footer Button gap
+  .el-message-box__btns {
+    .el-button + .el-button {
+      margin-left: var(--comp-dialog-spacing-gap);
+    }
+    // message box footer button small
+    .el-button {
+      @include button-sizing(
+      var(--comp-button-spacing-horizontal-small),
+      var(--comp-button-sizing-small),
+      var(--comp-button-typography-small),
+      var(--comp-button-sizing-icon-small)
+      );
+    }
+  }
+
+  // footer center
+  &.el-message-box--center {
     .el-message-box__header {
-      font: $comp-dialog-typography-title;
-      color: $comp-dialog-color-text-base;
-      background-color: $comp-dialog-color-background-default;
-      .el-message-box__headerbtn {
-        width: $comp-dialog-sizing-title-icon-close;
-        top: $dialog-close-position-top;
-        .el-message-box__close {
-          font-size: $comp-dialog-sizing-title-icon-close;
-          color: $comp-dialog-color-text-base;
-        }
-      }
+      padding-top: calc(var(--comp-dialog-spacing-centered-content-button-bottom) + var(--comp-dialog-spacing-vertical));
     }
-
-    // footer Button gap
-    .el-message-box__footer {
-      .el-button + .el-button {
-        margin-left: $comp-dialog-spacing-gap;
-      }
-    }
-
-    // footer center
-    &.el-message-box--center {
-      $dialog-center-footer-padding-botton: $comp-dialog-spacing-vertical + $comp-dialog-spacing-centered-content-button-bottom;
-      $dialog-center-header-padding-top: $comp-dialog-spacing-vertical + $comp-dialog-spacing-centered-content-button-bottom;
-      $dialog-center-close-position-top: 15px;
-      .el-message-box__header {
-        padding: $dialog-center-header-padding-top $comp-dialog-spacing-horizontal $comp-dialog-spacing-vertical $comp-dialog-spacing-horizontal;
-        .el-message-box__headerbtn {
-          top: $dialog-center-close-position-top;
-        }
-      }
-      .el-message-box__footer {
-        padding: $comp-dialog-spacing-vertical $comp-dialog-spacing-horizontal $dialog-center-footer-padding-botton $comp-dialog-spacing-horizontal;
-      }
+    .el-message-box__btns {
+      padding-bottom: calc(var(--comp-dialog-spacing-centered-content-button-bottom) + var(--comp-dialog-spacing-vertical));
     }
   }
 }
@@ -52,48 +59,3 @@
 .el-message-box__wrapper {
   @include layer-index('toast', 10);
 }
-
-//.el-message-box {
-//  width: 89.337%;
-//  max-width: 420px;
-//  border-radius: 3px;
-//}
-//
-//.el-message-box__status {
-//  position: absolute;
-//  top: 50%;
-//  transform: translateY(-50%);
-//  font-size: 24px;
-//}
-//
-//.el-message-box__message {
-//
-//  .el-message-box__message--title {
-//    font-weight:bold;
-//  }
-//
-//  .el-message-box__message--desc {
-//    margin-top: 15px;
-//    font-size: 12px;
-//    color: $--color-achromatic7;
-//  }
-//}
-//
-//.email-alert__modal-icon,
-//.email-alert__title,
-//.email-alert__desc,
-//.email-alert__profile-email {
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//  text-align: center;
-//}
-//
-//.email-alert__modal-icon {
-//  margin-bottom: 20px;
-//}
-//
-//.email-alert__profile-email {
-//  font-weight: $--font-weight-bold;
-//  color: $--color-blue;
-//}
