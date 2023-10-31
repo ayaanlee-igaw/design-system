@@ -27,6 +27,8 @@
     <Slider />
     <hr class="my-4" />
     <Progress />
+    <hr class="my-4" />
+    <Upload />
   </div>
 </template>
 
@@ -45,4 +47,5 @@
   import Cascader from "@/components/Cascader/Cascader.vue";
   import Slider from "@/components/Slider/Slider.vue";
   import Progress from "@/components/Progress/Progress.vue";
+  import Upload from "@/components/Upload/Upload.vue";
 </script>
