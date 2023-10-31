@@ -25,6 +25,8 @@
     <Cascader />
     <hr class="my-4" />
     <Slider />
+    <hr class="my-4" />
+    <Progress />
   </div>
 </template>
 
@@ -42,4 +44,5 @@
   import Pagination from "@/components/Pagination/Pagination.vue";
   import Cascader from "@/components/Cascader/Cascader.vue";
   import Slider from "@/components/Slider/Slider.vue";
+  import Progress from "@/components/Progress/Progress.vue";
 </script>

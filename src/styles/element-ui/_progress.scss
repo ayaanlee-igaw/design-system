@@ -31,13 +31,13 @@
   &.el-progress--line {
     .el-progress-bar {
       .el-progress-bar__outer {
-        height: $comp-progress-sizing-height-line !important;
-        background-color: $comp-progress-color-background;
+        height: var(--comp-progress-sizing-height-line) !important;
+        background-color: var(--comp-progress-color-background);
       }
     }
     .el-progress__text {
-      font: $comp-progress-typography-percent;
-      color: $comp-progress-color-text;
+      font: var(--comp-progress-typography-percent);
+      color: var(--comp-progress-color-text);
     }
   }
 
@@ -45,11 +45,11 @@
   &.el-progress--line.el-progress--text-inside {
     .el-progress-bar {
       .el-progress-bar__outer {
-        height: $comp-progress-sizing-height-internal !important;
+        height: var(--comp-progress-sizing-height-internal) !important;
         .el-progress-bar__inner {
           .el-progress-bar__innerText {
-            font: $comp-progress-typography-percent;
-            color: $comp-progress-color-text-inverse;
+            font: var(--comp-progress-typography-percent);
+            color: var(--comp-progress-color-text-inverse);
           }
         }
       }
