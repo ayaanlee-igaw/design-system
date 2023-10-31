@@ -21,6 +21,8 @@
     <Dropdown />
     <hr class="my-4" />
     <Pagination />
+    <hr class="my-4" />
+    <Cascader />
   </div>
 </template>
 
@@ -36,4 +38,5 @@
   import Tooltip from "@/components/Tooltip/Tooltip.vue";
   import Dropdown from "@/components/Dropdown/Dropdown.vue";
   import Pagination from "@/components/Pagination/Pagination.vue";
+  import Cascader from "@/components/Cascader/Cascader.vue";
 </script>

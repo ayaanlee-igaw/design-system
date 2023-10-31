@@ -66,11 +66,13 @@
   }
 
   // selest sizing
-  @include select-sizing(
-  var(--comp-select-sizing-height-large),
-  var(--comp-select-typography-large),
-  var(--comp-select-sizing-icon-large)
-  );
+  &, &.el-select--large {
+    @include select-sizing(
+    var(--comp-select-sizing-height-large),
+    var(--comp-select-typography-large),
+    var(--comp-select-sizing-icon-large)
+    );
+  }
   &.el-select--medium {
     @include select-sizing(
     var(--comp-select-sizing-height-medium),
@@ -106,15 +108,17 @@
       }
     }
   }
-  // select tag sizing
+  // select tag sizing(tag mixin 이용)
   // select 크기에 상관 없이 tag small로 바인딩 되는 문제점 해결
-  .el-select__tags {
-    .el-tag {
-      @include tag-sizing(
-      var(--comp-tag-spacing-horizontal-large),
-      var(--comp-tag-sizing-height-large),
-      var(--comp-tag-typography-text-large)
-      );
+  &, &.el-select--large {
+    .el-select__tags {
+      .el-tag {
+        @include tag-sizing(
+        var(--comp-tag-spacing-horizontal-large),
+        var(--comp-tag-sizing-height-large),
+        var(--comp-tag-typography-text-large)
+        );
+      }
     }
   }
   &.el-select--medium {
