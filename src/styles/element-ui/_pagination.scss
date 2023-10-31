@@ -38,7 +38,7 @@
     // pagination Button disabled
     &:disabled {
       color: $color;
-      opacity: $comp-pagination-opacity-disabled;
+      opacity: var(--comp-pagination-opacity-disabled);
     }
 
     // pagination Button hover
@@ -54,15 +54,21 @@
       color: $color;
 
       // pagination number, quicknext Button hover
-      &:not(.disabled):hover {
+      &:not(.is-disabled):not(.is-active):hover {
         color: $hover-color;
       }
+
+      // pagination disabled
+      &.is-disabled {
+        opacity: var(--comp-pagination-opacity-disabled);
+      }
     }
+
+    // pagination number
     .number {
       font: $font;
-
       // pagination number active
-      &:not(.disabled).active {
+      &.is-active {
         font: $active-font;
         color: $active-color;
       }
@@ -71,11 +77,11 @@
 }
 
 // pagination background setting mixin
-@mixin pagination-background-setting($font, $active-font, $color, $active-color, $hover-color, $background, $active-background, $border-radius) {
+@mixin pagination-background-setting($font, $active-font, $color, $active-color, $hover-color, $bg, $active-bg, $border-radius) {
   @include pagination-setting($font, $active-font, $color, $active-color, $hover-color);
   .btn-prev,
   .btn-next {
-    background-color: $background;
+    background-color: $bg;
     border-radius: $border-radius;
   }
 
@@ -83,13 +89,15 @@
   .el-pager {
     .number,
     .more {
-      background-color: $background;
+      background-color: $bg;
       border-radius: $border-radius;
     }
     .number {
       // pagination number active
-      &:not(.disabled).active {
-        background-color: $active-background;
+      &.is-active,
+      &.is-active.is-disabled {
+        color: $active-color;
+        background-color: $active-bg;
       }
     }
   }
@@ -113,50 +121,50 @@
 .el-pagination {
   // pagination sizing
   @include pagination-sizing(
-      $comp-pagination-sizing-basic-height,
-      $comp-pagination-spacing-basic-horizontal-number,
-      $comp-pagination-spacing-basic-horizontal-icon,
-      $comp-pagination-sizing-basic-icon
+  var(--comp-pagination-sizing-basic-height),
+  var(--comp-pagination-spacing-basic-horizontal-number),
+  var(--comp-pagination-spacing-basic-horizontal-icon),
+  var(--comp-pagination-sizing-basic-icon)
   );
   &.el-pagination--small {
     @include pagination-sizing(
-        $comp-pagination-sizing-basic-height-small,
-        $comp-pagination-spacing-basic-horizontal-number-small,
-        $comp-pagination-spacing-basic-horizontal-icon-small,
-        $comp-pagination-sizing-basic-icon
+    var(--comp-pagination-sizing-basic-height-small),
+    var(--comp-pagination-spacing-basic-horizontal-number-small),
+    var(--comp-pagination-spacing-basic-horizontal-icon-small),
+    var(--comp-pagination-sizing-basic-icon)
     );
   }
 
   // pagination setting
   @include pagination-setting(
-      $comp-pagination-typography-text,
-      $comp-pagination-typography-text-selected,
-      $comp-pagination-color-basic-text,
-      $comp-pagination-color-basic-text-selected,
-      $comp-pagination-color-basic-text-hover
+  var(--comp-pagination-typography-text),
+  var(--comp-pagination-typography-text-selected),
+  var(--comp-pagination-color-basic-text),
+  var(--comp-pagination-color-basic-text-selected),
+  var(--comp-pagination-color-basic-text-hover)
   );
 
   // total
   .el-pagination__total {
-    margin-right: $comp-pagination-spacing-more-gap;
-    font: $comp-pagination-typography-text;
-    color: $comp-pagination-color-more-text;
+    margin-right: var(--comp-pagination-spacing-more-gap);
+    font: var(--comp-pagination-typography-text);
+    color: var(--comp-pagination-color-more-text);
   }
   .el-pagination__sizes {
-    margin-right: $comp-pagination-spacing-more-gap;
-    font: $comp-select-typography-mini;
-    color: $comp-select-color-text-active;
+    margin-right: var(--comp-pagination-spacing-more-gap);
+    font: var(--comp-select-typography-mini);
+    color: var(--comp-select-color-text-active);
     .el-input--suffix {
-      margin: 0 $comp-pagination-spacing-more-gap 0 0;
+      margin: 0 var(--comp-pagination-spacing-more-gap) 0 0;
     }
   }
   .el-pagination__jump {
-    margin-left: $comp-pagination-spacing-more-gap;
-    font: $comp-pagination-typography-text;
-    color: $comp-pagination-color-more-text;
+    margin-left: var(--comp-pagination-spacing-more-gap);
+    font: var(--comp-pagination-typography-text);
+    color: var(--comp-pagination-color-more-text);
     .el-pagination__editor {
       padding: 0;
-      margin: 0 $comp-pagination-spacing-more-gap;
+      margin: 0 var(--comp-pagination-spacing-more-gap);
     }
   }
 
@@ -164,51 +172,72 @@
   &.is-background {
     // background type sizing
     @include pagination-sizing(
-        $comp-pagination-sizing-basic-height,
-        $comp-pagination-spacing-basic-horizontal-number,
-        $comp-pagination-spacing-basic-horizontal-icon,
-        $comp-pagination-sizing-basic-icon
+    var(--comp-pagination-sizing-basic-height),
+    var(--comp-pagination-spacing-basic-horizontal-number),
+    var(--comp-pagination-spacing-basic-horizontal-icon),
+    var(--comp-pagination-sizing-basic-icon)
     );
     &.el-pagination--small {
       @include pagination-sizing(
-          $comp-pagination-sizing-basic-height-small,
-          $comp-pagination-spacing-basic-horizontal-number-small,
-          $comp-pagination-spacing-basic-horizontal-icon-small,
-          $comp-pagination-sizing-basic-icon
+      var(--comp-pagination-sizing-basic-height-small),
+      var(--comp-pagination-spacing-basic-horizontal-number-small),
+      var(--comp-pagination-spacing-basic-horizontal-icon-small),
+      var(--comp-pagination-sizing-basic-icon)
       );
     }
 
     // background type gap
-    @include pagination-background-gap($comp-pagination-spacing-basic-gap);
+    @include pagination-background-gap(var(--comp-pagination-spacing-basic-gap));
     &.el-pagination--small {
-      @include pagination-background-gap($comp-pagination-spacing-basic-gap-small);
+      @include pagination-background-gap(var(--comp-pagination-spacing-basic-gap-small));
     }
 
     // background type setting
     @include pagination-background-setting(
-        $comp-pagination-typography-text,
-        $comp-pagination-typography-text-selected,
-        $comp-pagination-color-basic-text,
-        $comp-pagination-color-basic-text-inverse,
-        $comp-pagination-color-basic-text-hover,
-        $comp-pagination-color-basic-background-default,
-        $comp-pagination-color-basic-background-selected,
-        $comp-pagination-border-radius-background
+    var(--comp-pagination-typography-text),
+    var(--comp-pagination-typography-text-selected),
+    var(--comp-pagination-color-basic-text),
+    var(--comp-pagination-color-basic-text-inverse),
+    var(--comp-pagination-color-basic-text-hover),
+    var(--comp-pagination-color-basic-background-default),
+    var(--comp-pagination-color-basic-background-selected),
+    var(--comp-pagination-border-radius-background)
     );
   }
 }
 
 // pagination select
-// element ui 내부에서 스타일을 바인딩하여, 다시 스타일 적용
 .el-pagination {
-  .el-pagination__sizes {
+  .el-pagination__sizes,
+  .el-pagination__jump {
     .el-select {
-      .el-input {
-        .el-input__inner {
-          &:hover {
-            border: $comp-input-border-hover;
-          }
-        }
+      @include select-sizing(
+      var(--comp-select-sizing-height-medium),
+      var(--comp-select-typography-medium),
+      var(--comp-select-sizing-icon-medium)
+      );
+      &.el-select--small {
+        @include select-sizing(
+        var(--comp-select-sizing-height-mini),
+        var(--comp-select-typography-mini),
+        var(--comp-select-sizing-icon-mini)
+        );
+      }
+    }
+    .el-input {
+      @include input-sizing(
+      var(--comp-input-sizing-height-medium),
+      var(--comp-input-typography-medium),
+      var(--comp-input-sizing-icon-medium),
+      var(--comp-input-spacing-slot-button-horizontal-medium)
+      );
+      &.el-input--small {
+        @include input-sizing(
+        var(--comp-input-sizing-height-mini),
+        var(--comp-input-typography-mini),
+        var(--comp-input-sizing-icon-mini),
+        var(--comp-input-spacing-slot-button-horizontal-mini)
+        );
       }
     }
   }

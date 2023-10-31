@@ -1,15 +1,26 @@
 <template>
   <div style="display: flex; flex-direction: column; gap: 20px;">
     <Button />
+    <hr class="my-4" />
     <Input />
+    <hr class="my-4" />
     <Select />
+    <hr class="my-4" />
     <Radio />
+    <hr class="my-4" />
     <Tooltip />
+    <hr class="my-4" />
     <CheckBox />
+    <hr class="my-4" />
     <Tag />
+    <hr class="my-4" />
     <Badge />
+    <hr class="my-4" />
     <Switch />
+    <hr class="my-4" />
     <Dropdown />
+    <hr class="my-4" />
+    <Pagination />
   </div>
 </template>
 
@@ -24,4 +35,5 @@
   import Switch from "@/components/Switch/Switch.vue";
   import Tooltip from "@/components/Tooltip/Tooltip.vue";
   import Dropdown from "@/components/Dropdown/Dropdown.vue";
+  import Pagination from "@/components/Pagination/Pagination.vue";
 </script>

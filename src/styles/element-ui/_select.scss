@@ -5,7 +5,9 @@
       height: auto;
       min-height: $height;
       .el-input__inner {
-        height: $height;
+        // mini size가 정상적으로 출력될 수 있도록 추가
+        // -> @todo el-input group의 select가 깨짐. 추후 해결.
+        //height: $height;
         font: $font;
         &::placeholder {
           font: $font;
