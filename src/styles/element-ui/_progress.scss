@@ -59,23 +59,23 @@
   // bar border radius
   .el-progress-bar {
     .el-progress-bar__outer {
-      border-radius: 0 $comp-progress-border-radius-bar-end $comp-progress-border-radius-bar-end 0;
+      border-radius: 0 var(--comp-progress-border-radius-bar-end) var(--comp-progress-border-radius-bar-end) 0;
       .el-progress-bar__inner {
-        border-radius: 0 $comp-progress-border-radius-bar-end $comp-progress-border-radius-bar-end 0;
+        border-radius: 0 var(--comp-progress-border-radius-bar-end) var(--comp-progress-border-radius-bar-end) 0;
       }
     }
   }
 
   // bar color
-  @include bar-color($comp-progress-color-background-bar-blue);
+  @include bar-color(var(--comp-progress-color-background-bar-blue));
   &.is-success {
-    @include bar-color($comp-progress-color-background-bar-green);
+    @include bar-color(var(--comp-progress-color-background-bar-green));
   }
   &.is-warning {
-    @include bar-color($comp-progress-color-background-bar-orange);
+    @include bar-color(var(--comp-progress-color-background-bar-orange));
   }
   &.is-exception {
-    @include bar-color($comp-progress-color-background-bar-red);
+    @include bar-color(var(--comp-progress-color-background-bar-red));
   }
 
   // circle
@@ -84,22 +84,22 @@
       svg {
         path {
           &:first-child {
-            stroke: $comp-progress-color-background;
+            stroke: var(--comp-progress-color-background);
           }
         }
       }
     }
 
     // circle color
-    @include circle-color($comp-progress-color-background-bar-blue);
+    @include circle-color(var(--comp-progress-color-background-bar-blue));
     &.is-success {
-      @include circle-color($comp-progress-color-background-bar-green);
+      @include circle-color(var(--comp-progress-color-background-bar-green));
     }
     &.is-warning {
-      @include circle-color($comp-progress-color-background-bar-orange);
+      @include circle-color(var(--comp-progress-color-background-bar-orange));
     }
     &.is-exception {
-      @include circle-color($comp-progress-color-background-bar-red);
+      @include circle-color(var(--comp-progress-color-background-bar-red));
     }
   }
 }
