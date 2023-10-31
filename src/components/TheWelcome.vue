@@ -23,6 +23,8 @@
     <Pagination />
     <hr class="my-4" />
     <Cascader />
+    <hr class="my-4" />
+    <Slider />
   </div>
 </template>
 
@@ -39,4 +41,5 @@
   import Dropdown from "@/components/Dropdown/Dropdown.vue";
   import Pagination from "@/components/Pagination/Pagination.vue";
   import Cascader from "@/components/Cascader/Cascader.vue";
+  import Slider from "@/components/Slider/Slider.vue";
 </script>
