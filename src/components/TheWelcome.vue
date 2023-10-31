@@ -29,6 +29,8 @@
     <Progress />
     <hr class="my-4" />
     <Upload />
+    <hr class="my-4" />
+    <Popover />
   </div>
 </template>
 
@@ -48,4 +50,5 @@
   import Slider from "@/components/Slider/Slider.vue";
   import Progress from "@/components/Progress/Progress.vue";
   import Upload from "@/components/Upload/Upload.vue";
+  import Popover from "@/components/Popover/Popover.vue";
 </script>
