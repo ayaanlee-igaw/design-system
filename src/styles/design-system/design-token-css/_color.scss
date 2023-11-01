@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Nov 2023 06:41:15 GMT
+ * Generated on Wed, 01 Nov 2023 08:51:22 GMT
  */
 
 :root {
@@ -236,7 +236,10 @@
   --comp-cascader-color-popper-divider: var(--sys-color-border-base);
   --comp-alert-color-text-description: var(--sys-color-text-base);
   --comp-alert-color-text-title: var(--sys-color-text-base);
-  --comp-alert-color-background-base: var(--sys-color-background-base);
+  --comp-alert-color-background-error: var(--sys-color-background-accent-error-tint);
+  --comp-alert-color-background-warning: var(--sys-color-background-accent-warning-tint);
+  --comp-alert-color-background-infomation: var(--sys-color-background-accent-secondary-tint);
+  --comp-alert-color-background-success: var(--sys-color-background-accent-success-tint);
   --comp-tab-color-line-icon: var(--sys-color-icon-sub);
   --comp-tab-color-line-text: var(--sys-color-text-sub);
   --comp-tab-color-line-border: var(--sys-color-border-base);
@@ -456,10 +459,10 @@
   --comp-toast-color-text-base: var(--sys-color-text-inverse);
   --comp-cascader-color-list-icon-selected: var(--sys-color-icon-accent-primary);
   --comp-cascader-color-list-text-selected: var(--sys-color-text-accent-primary);
-  --comp-alert-color-outline-error: var(--sys-color-outline-accent-error);
-  --comp-alert-color-outline-warning: var(--sys-color-outline-accent-warning);
-  --comp-alert-color-outline-info: var(--sys-color-outline-accent-secondary);
-  --comp-alert-color-outline-success: var(--sys-color-outline-accent-success);
+  --comp-alert-color-border-error: var(--sys-color-border-accent-error);
+  --comp-alert-color-border-warning: var(--sys-color-border-accent-warning);
+  --comp-alert-color-border-info: var(--sys-color-border-accent-secondary);
+  --comp-alert-color-border-success: var(--sys-color-border-accent-success);
   --comp-alert-color-text-error: var(--sys-color-text-accent-error);
   --comp-alert-color-text-warning: var(--sys-color-text-accent-warning);
   --comp-alert-color-text-info: var(--sys-color-text-accent-secondary);

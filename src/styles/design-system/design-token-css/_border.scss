@@ -1,13 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Nov 2023 06:41:15 GMT
+ * Generated on Wed, 01 Nov 2023 08:51:22 GMT
  */
 
 :root {
-  --comp-alert-border-error: var(--sys-border-width-thin) solid var(--sys-color-outline-accent-error);
-  --comp-alert-border-warning: var(--sys-border-width-thin) solid var(--sys-color-outline-accent-warning);
-  --comp-alert-border-info: var(--sys-border-width-thin) solid var(--sys-color-outline-accent-secondary);
-  --comp-alert-border-success: var(--sys-border-width-thin) solid var(--sys-color-outline-accent-success);
   --comp-upload-border-drag-file: var(--comp-upload-borderwidth-drag-file) dashed var(--comp-upload-color-drag-file-outline);
   --comp-dialog-border-side-button-top: var(--comp-dialog-borderwidth-default) solid var(--comp-dialog-color-border-divider);
   --comp-dialog-border-side-title-bottom: var(--comp-dialog-borderwidth-default) solid var(--comp-dialog-color-border-divider);
@@ -37,6 +33,10 @@
   --comp-button-border-plain-hover: var(--comp-button-borderwidth-default) solid var(--comp-button-color-outline-base-hover);
   --comp-button-border-plain-pressed: var(--comp-button-borderwidth-default) solid var(--comp-button-color-outline-base-pressed);
   --comp-button-border-plain-default: var(--comp-button-borderwidth-default) solid var(--comp-button-color-outline-base);
+  --comp-alert-border-error: var(--comp-alert-borderwidth-point) solid var(--comp-alert-color-border-error);
+  --comp-alert-border-warning: var(--comp-alert-borderwidth-point) solid var(--comp-alert-color-border-warning);
+  --comp-alert-border-info: var(--comp-alert-borderwidth-point) solid var(--comp-alert-color-border-info);
+  --comp-alert-border-success: var(--comp-alert-borderwidth-point) solid var(--comp-alert-color-border-success);
   --comp-upload-border-drag-file-hover: var(--comp-upload-borderwidth-drag-file) dashed var(--comp-upload-color-drag-file-outline-hover);
   --comp-dialog-border-slot: var(--comp-dialog-borderwidth-default) dashed var(--comp-dialog-color-outline-slot);
   --comp-slider-border-position-control: var(--comp-slider-borderwidth-position-control) solid var(--comp-slider-color-outline-position-control);
