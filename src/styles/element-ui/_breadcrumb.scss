@@ -1,19 +1,28 @@
 .el-breadcrumb {
   .el-breadcrumb__item {
-    font: $comp-breadcrumb-typography-sub-title;
-    color: $comp-breadcrumb-color-sub-title;
+    .el-breadcrumb__inner {
+      font: var(--comp-breadcrumb-typography-sub-title);
+      color: var(--comp-breadcrumb-color-sub-title);
 
-    &.is-link {
-      font: $comp-breadcrumb-typography-main-title;
-      color: $comp-breadcrumb-color-main-title;
+      // link(to path)
+      &.is-link {
+        font: var(--comp-breadcrumb-typography-main-title);
+        color: var(--comp-breadcrumb-color-main-title);
+        &:hover {
+          color: var(--comp-breadcrumb-color-main-title-hover);
+        }
+      }
+
+      // link(a tag)
+      a:hover {
+        color: var(--comp-breadcrumb-color-main-title-hover);
+      }
     }
 
     // breadcrumb separator
     .el-breadcrumb__separator {
-      margin: 0 $comp-breadcrumb-spacing-horizontal-basic;
-    }
-    i.el-breadcrumb__separator {
-      margin: 0 $comp-breadcrumb-spacing-horizontal-icon;
+      margin: 0 var(--comp-breadcrumb-spacing-horizontal-basic);
+      color: var(--comp-breadcrumb-color-separator);
     }
   }
 }

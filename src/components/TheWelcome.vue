@@ -28,6 +28,8 @@
     <hr class="my-4" />
     <Progress />
     <hr class="my-4" />
+    <Breadcrumb />
+    <hr class="my-4" />
     <Upload />
     <hr class="my-4" />
     <Popover />
@@ -51,6 +53,7 @@
   import Cascader from "@/components/Cascader/Cascader.vue";
   import Slider from "@/components/Slider/Slider.vue";
   import Progress from "@/components/Progress/Progress.vue";
+  import Breadcrumb from "@/components/Breadcrumb/Breadcrumb.vue";
   import Upload from "@/components/Upload/Upload.vue";
   import Popover from "@/components/Popover/Popover.vue";
   import Dialog from "@/components/Dialog/Dialog.vue";

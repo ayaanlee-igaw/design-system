@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 30 Oct 2023 07:03:34 GMT
+ * Generated on Wed, 01 Nov 2023 00:47:44 GMT
  */
 
 :root {
@@ -343,6 +343,7 @@
   --sys-color-icon-accent-primary-hover: var(--sys-color-primary-hover);
   --sys-color-icon-accent-primary: var(--sys-color-primary);
   --sys-color-text-inverse: var(--sys-color-inverse);
+  --sys-color-text-base-hover: var(--sys-color-primary);
   --sys-color-text-accent-error-pressed: var(--sys-color-error-pressed);
   --sys-color-text-accent-error-hover: var(--sys-color-error-hover);
   --sys-color-text-accent-error: var(--sys-color-error);
@@ -401,6 +402,7 @@
   --ui-color-text-primary: var(--sys-color-text-accent-primary);
   --comp-carousel-color-arrow-icon: var(--sys-color-icon-inverse);
   --comp-carousel-color-indicator-outside: var(--sys-color-background-accent-secondary);
+  --comp-breadcrumb-color-main-title-hover: var(--sys-color-text-base-hover);
   --comp-upload-color-drag-file-outline-hover: var(--sys-color-outline-accent-primary);
   --comp-upload-color-list-background-progress-bar: var(--sys-color-background-accent-primary);
   --comp-upload-color-list-text-active: var(--sys-color-text-accent-primary);

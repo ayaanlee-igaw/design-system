@@ -1,3 +1,4 @@
+// check box bordered sizing mixin
 @mixin checkbox-bordered-sizing($height, $font, $selected-font) {
   height: $height;
   font: $font;
@@ -11,6 +12,7 @@
   }
 }
 
+// checkbox
 .el-checkbox {
   .el-checkbox__input {
     .el-checkbox__inner {
