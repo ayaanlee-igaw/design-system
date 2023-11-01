@@ -20,8 +20,13 @@
   }
 }
 
+// radio
 .el-radio {
-  // default
+  margin: 0;
+  &:not(:last-child) {
+    margin-right: var(--comp-radio-spacing-group-row-gap);
+  }
+
   &, &.is-bordered {
     .el-radio__input {
       .el-radio__inner {

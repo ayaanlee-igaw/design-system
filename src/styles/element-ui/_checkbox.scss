@@ -14,6 +14,10 @@
 
 // checkbox
 .el-checkbox {
+  &:not(:last-child) {
+    margin-right: var(--comp-radio-spacing-group-row-gap);
+  }
+  
   .el-checkbox__input {
     .el-checkbox__inner {
       background-color: var(--comp-checkbox-color-background);
