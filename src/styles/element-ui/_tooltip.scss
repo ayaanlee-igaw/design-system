@@ -5,10 +5,11 @@
     background-color: var(--comp-tooltip-color-background-tip);
     border: none;
     border-radius: var(--comp-tooltip-border-radius-tip);
-  }
-  .popper__arrow {
-    &::after {
-      border-top-color: var(--comp-tooltip-color-background-tip);
+    .el-popper__arrow {
+      &::before {
+        background-color: var(--comp-tooltip-color-background-tip);
+        border-color: var(--comp-tooltip-color-background-tip);
+      }
     }
   }
 }

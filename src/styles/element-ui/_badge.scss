@@ -42,7 +42,7 @@
   // custom class
   &.el-badge--flash {
     .el-badge__content {
-      animation: $comp-badge-flash-ease-2;
+      animation: var(--custom-comp-badge-flash-ease-2);
     }
   }
 }

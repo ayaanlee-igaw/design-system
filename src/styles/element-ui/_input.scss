@@ -272,8 +272,9 @@
       .el-input-group__prepend,
       .el-input-group__append {
         .el-select {
-          margin-left: -$comp-input-spacing-slot-plaintext-horizontal;
-          margin-right: -$comp-input-spacing-slot-plaintext-horizontal;
+          $input-select-margin-side: calc(var(--comp-input-spacing-slot-plaintext-horizontal) * -1);
+          margin-left: $input-select-margin-side;
+          margin-right: $input-select-margin-side;
           background-color: var(--comp-input-color-background);
           .el-input {
             .el-input__wrapper {

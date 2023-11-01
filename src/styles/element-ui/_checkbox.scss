@@ -2,7 +2,7 @@
 @mixin checkbox-bordered-sizing($height, $font, $selected-font) {
   height: $height;
   font: $font;
-  border-radius: $comp-checkbox-border-radius-button;
+  border-radius: var(--comp-checkbox-border-radius-button);
   &.is-checked,
   &.is-checked.is-disabled {
     font: $selected-font;

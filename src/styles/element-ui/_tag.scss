@@ -30,7 +30,7 @@
     margin: 0;
     &::before {
       // element ui에서 사용중인 icon이 작아서, 임의로 사이즈 추가
-      font-size: $comp-tag-sizing-icon-close + 4px;
+      font-size: calc(var(--comp-tag-sizing-icon-close) + 4px);
     }
   }
 

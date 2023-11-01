@@ -1,6 +1,6 @@
 // radio bordered sizing mixin
 @mixin radio-bordered-sizing($height, $font, $selected-font) {
-  padding: 0 $comp-radio-spacing-button-horizontal;
+  padding: 0 var(--comp-radio-spacing-button-horizontal);
   height: $height;
   .el-radio__label {
     font: $font;
@@ -29,7 +29,7 @@
         height: var(--comp-radio-sizing-backgorund);
         border: var(--comp-radio-border-default);
         &::after {
-          $radio-inner-circle-sizing: $comp-radio-sizing-backgorund - $comp-radio-border-width-selected*2;
+          $radio-inner-circle-sizing: calc(var(--comp-radio-sizing-backgorund) - var(--comp-radio-border-width-selected) * 2);
           width: $radio-inner-circle-sizing;
           height: $radio-inner-circle-sizing;
         }
