@@ -1,0 +1,63 @@
+// message color mixin
+@mixin message-color($bg, $color, $icon-color, $border) {
+  background-color: $bg;
+  border: $border;
+  .el-icon {
+    color: $icon-color;
+  }
+  .el-message__content {
+    color: $color;
+  }
+}
+
+// message
+.el-message {
+  padding: var(--comp-messasge-spacing-vertical) var(--comp-messasge-spacing-horizontal);
+  //min-width: 500px;
+  border-radius: var(--comp-message-border-radius-default);
+  .el-icon {
+    margin-right: var(--comp-messasge-spacing-gap);
+    font-size: var(--comp-message-sizing-icon-prefix-single);
+    &.el-message__closeBtn {
+      margin: 0;
+      font-size: var(--comp-message-sizing-icon-close);
+    }
+  }
+  .el-message__content {
+    font: var(--comp-message-typography-content-text);
+  }
+
+  // message color
+  &.el-message--success {
+    @include message-color(
+    var(--comp-messasge-color-background-success),
+    var(--comp-messasge-color-text-success),
+    var(--comp-messasge-color-icon-success),
+    var(--comp-message-border-success)
+    );
+  }
+  &.el-message--warning {
+    @include message-color(
+    var(--comp-messasge-color-background-warning),
+    var(--comp-messasge-color-text-warning),
+    var(--comp-messasge-color-icon-warning),
+    var(--comp-message-border-warning)
+    );
+  }
+  &.el-message--info {
+    @include message-color(
+    var(--comp-messasge-color-background-info),
+    var(--comp-messasge-color-text-info),
+    var(--comp-messasge-color-icon-info),
+    var(--comp-message-border-info)
+    );
+  }
+  &.el-message--error {
+    @include message-color(
+    var(--comp-messasge-color-background-error),
+    var(--comp-messasge-color-text-error),
+    var(--comp-messasge-color-icon-error),
+    var(--comp-message-border-error)
+    );
+  }
+}

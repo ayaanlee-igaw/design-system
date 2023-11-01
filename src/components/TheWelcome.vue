@@ -1,40 +1,42 @@
 <template>
   <div style="display: flex; flex-direction: column; gap: 20px;">
-    <Button />
-    <hr class="my-4" />
-    <Input />
-    <hr class="my-4" />
-    <Select />
-    <hr class="my-4" />
-    <Radio />
-    <hr class="my-4" />
-    <Tooltip />
-    <hr class="my-4" />
-    <CheckBox />
-    <hr class="my-4" />
-    <Tag />
-    <hr class="my-4" />
     <Badge />
-    <hr class="my-4" />
-    <Switch />
-    <hr class="my-4" />
-    <Dropdown />
-    <hr class="my-4" />
-    <Pagination />
-    <hr class="my-4" />
-    <Cascader />
-    <hr class="my-4" />
-    <Slider />
-    <hr class="my-4" />
-    <Progress />
     <hr class="my-4" />
     <Breadcrumb />
     <hr class="my-4" />
-    <Upload />
+    <Button />
+    <hr class="my-4" />
+    <Cascader />
+    <hr class="my-4" />
+    <CheckBox />
+    <hr class="my-4" />
+    <Dialog />
+    <hr class="my-4" />
+    <Dropdown />
+    <hr class="my-4" />
+    <Input />
+    <hr class="my-4" />
+    <Message />
+    <hr class="my-4" />
+    <Pagination />
     <hr class="my-4" />
     <Popover />
     <hr class="my-4" />
-    <Dialog />
+    <Progress />
+    <hr class="my-4" />
+    <Radio />
+    <hr class="my-4" />
+    <Select />
+    <hr class="my-4" />
+    <Slider />
+    <hr class="my-4" />
+    <Switch />
+    <hr class="my-4" />
+    <Tag />
+    <hr class="my-4" />
+    <Tooltip />
+    <hr class="my-4" />
+    <Upload />
   </div>
 </template>
 
@@ -57,4 +59,5 @@
   import Upload from "@/components/Upload/Upload.vue";
   import Popover from "@/components/Popover/Popover.vue";
   import Dialog from "@/components/Dialog/Dialog.vue";
+  import Message from "@/components/Message/Message.vue";
 </script>
