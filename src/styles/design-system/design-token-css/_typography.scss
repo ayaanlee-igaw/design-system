@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Nov 2023 00:47:44 GMT
+ * Generated on Wed, 01 Nov 2023 06:41:15 GMT
  */
 
 :root {
@@ -59,7 +59,7 @@
   --comp-tag-typography-text-small: var(--sys-typography-text-mn);
   --comp-tag-typography-text-medium: var(--sys-typography-text-md);
   --comp-tag-typography-text-large: var(--sys-typography-text-lg);
-  --comp-message-typography-content-text: var(--sys-typography-text-sm);
+  --comp-toast-typography-text: var(--sys-typography-text-lg);
   --comp-cascader-typography-list-text: var(--sys-typography-text-sm);
   --comp-alert-typography-text: var(--sys-typography-text-mn);
   --comp-alert-typography-title: var(--sys-typography-title-md);
@@ -81,6 +81,7 @@
   --comp-radio-typography-text-small: var(--sys-typography-text-sm);
   --comp-radio-typography-text-medium: var(--sys-typography-text-md);
   --comp-radio-typography-text-large: var(--sys-typography-text-lg);
+  --comp-dialog-typography-content-text: var(--sys-typography-text-sm);
   --comp-dialog-typography-title: var(--sys-typography-title-lg);
   --comp-forms-typography-title-mini: var(--sys-typography-title-mn);
   --comp-forms-typography-title-sm: var(--sys-typography-title-sm);

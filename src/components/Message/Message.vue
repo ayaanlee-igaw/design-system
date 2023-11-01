@@ -10,9 +10,6 @@
 
   <div>
     <el-button :plain="true" @click="open5">message</el-button>
-    <el-button :plain="true" @click="open6">success</el-button>
-    <el-button :plain="true" @click="open7">warning</el-button>
-    <el-button :plain="true" @click="open8">error</el-button>
   </div>
 
   <div>
@@ -23,6 +20,10 @@
 
 <script setup lang="ts">
 import { ElMessage } from 'element-plus'
+import InfoCircle from '@/icons/InfoCircle.vue';
+import SuccessCircle from "@/icons/SuccessCircle.vue";
+import WarningCircle from "@/icons/WarningCircle.vue";
+import DangerCircle from "@/icons/DangerCircle.vue";
 
 const open = () => {
   ElMessage({
@@ -41,49 +42,37 @@ const openCenter = () => {
 }
 
 const open1 = () => {
-  ElMessage('this is a message.')
+  ElMessage({
+    message: 'this is a message.',
+    icon: InfoCircle
+  })
 }
 const open2 = () => {
   ElMessage({
     message: 'Congrats, this is a success message.',
     type: 'success',
+    icon: SuccessCircle
   })
 }
 const open3 = () => {
   ElMessage({
     message: 'Warning, this is a warning message.',
     type: 'warning',
+    icon: WarningCircle
   })
 }
 const open4 = () => {
-  ElMessage.error('Oops, this is a error message.')
+  ElMessage.error({
+    message: 'Oops, this is a error message.',
+    icon: DangerCircle
+  })
 }
 
 const open5 = () => {
   ElMessage({
     showClose: true,
     message: 'This is a message.',
-  })
-}
-const open6 = () => {
-  ElMessage({
-    showClose: true,
-    message: 'Congrats, this is a success message.',
-    type: 'success',
-  })
-}
-const open7 = () => {
-  ElMessage({
-    showClose: true,
-    message: 'Warning, this is a warning message.',
-    type: 'warning',
-  })
-}
-const open8 = () => {
-  ElMessage({
-    showClose: true,
-    message: 'Oops, this is a error message.',
-    type: 'error',
+    icon: InfoCircle
   })
 }
 </script>

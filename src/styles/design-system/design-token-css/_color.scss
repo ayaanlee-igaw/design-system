@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Nov 2023 00:47:44 GMT
+ * Generated on Wed, 01 Nov 2023 06:41:15 GMT
  */
 
 :root {
@@ -227,14 +227,7 @@
   --comp-dialog-color-text-base: var(--sys-color-text-base);
   --comp-dialog-color-background-slot: var(--sys-color-background-accent-primary-tinit);
   --comp-dialog-color-background-default: var(--sys-color-background-base);
-  --comp-messasge-color-outline-error: var(--sys-color-outline-accent-error-light);
-  --comp-messasge-color-outline-warning: var(--sys-color-outline-accent-warning-light);
-  --comp-messasge-color-outline-info: var(--sys-color-outline-accent-secondary-light);
-  --comp-messasge-color-outline-success: var(--sys-color-outline-accent-success-light);
-  --comp-messasge-color-background-error: var(--sys-color-background-accent-error-tint);
-  --comp-messasge-color-background-warning: var(--sys-color-background-accent-warning-tint);
-  --comp-messasge-color-background-info: var(--sys-color-background-accent-secondary-tint);
-  --comp-messasge-color-background-success: var(--sys-color-background-accent-success-tint);
+  --comp-toast-color-background-base: var(--sys-color-background-inverse);
   --comp-dropdown-color-button-divider: var(--sys-color-border-inverse);
   --comp-cascader-color-list-icon: var(--sys-color-icon-base);
   --comp-cascader-color-list-text: var(--sys-color-text-base);
@@ -459,14 +452,8 @@
   --comp-tag-color-tint-text-blue: var(--sys-color-text-accent-primary);
   --comp-dialog-color-outline-slot: var(--sys-color-outline-accent-primary);
   --comp-dialog-color-text-slot: var(--sys-color-text-accent-primary);
-  --comp-messasge-color-text-error: var(--sys-color-text-accent-error);
-  --comp-messasge-color-text-warning: var(--sys-color-text-accent-warning);
-  --comp-messasge-color-text-info: var(--sys-color-text-accent-secondary);
-  --comp-messasge-color-text-success: var(--sys-color-text-accent-success);
-  --comp-messasge-color-icon-error: var(--sys-color-icon-accent-error);
-  --comp-messasge-color-icon-warning: var(--sys-color-icon-accent-warning);
-  --comp-messasge-color-icon-info: var(--sys-color-icon-accent-secondary);
-  --comp-messasge-color-icon-success: var(--sys-color-icon-accent-success);
+  --comp-toast-color-icon-close: var(--sys-color-icon-inverse);
+  --comp-toast-color-text-base: var(--sys-color-text-inverse);
   --comp-cascader-color-list-icon-selected: var(--sys-color-icon-accent-primary);
   --comp-cascader-color-list-text-selected: var(--sys-color-text-accent-primary);
   --comp-alert-color-outline-error: var(--sys-color-outline-accent-error);
