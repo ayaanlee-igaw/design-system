@@ -6,6 +6,7 @@
     "composite": true,
     "baseUrl": ".",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "paths": {
       "@/*": ["./src/*"]
     }
