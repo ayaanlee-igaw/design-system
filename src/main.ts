@@ -2,11 +2,15 @@ import './assets/main.css'
 import 'element-plus/dist/index.css'
 import './styles/styles.scss';
 
+// @ts-ignore
 import { createApp } from 'vue'
+// @ts-ignore
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
+// @ts-ignore
 import router from './router'
+// @ts-ignore
 import ElementPlus from 'element-plus'
 import InfoCircle from "@/icons/InfoCircle.vue";
 import SuccessCircle from "@/icons/SuccessCircle.vue";
