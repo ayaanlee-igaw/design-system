@@ -1,33 +1,33 @@
 <template>
-  <div :class="['alert-wrap', type, { 'center': isCenter }, { 'is-description-button': isShowDescriptionButton }]">
+  <div :class="['alert-wrap', props.type, { 'center': isCenter }, { 'is-description-button': isShowDescriptionButton }]">
     <div class="alert">
       <div class="alert-icon-wrap">
         <AlertIcon :fontSize="fontSize"></AlertIcon>
       </div>
       <div class="alert-contents-wrap">
         <div class="alert-contents">
-          <p v-if="title" class="alert-contents-title">{{ title }}</p>
+          <p v-if="title" class="alert-contents-title">{{ props.title }}</p>
           <slot>
-            <span v-if="description">
-              {{ description }}
+            <span v-if="props.description">
+              {{ props.description }}
             </span>
           </slot>
         </div>
         <el-button
           v-if="isShowTitleButton"
-          :class="['el-button--mini', `el-button--${type}`]"
+          :class="['el-button--mini', `el-button--${props.type}`]"
           @click="handleButton"
           plain>
-          {{ buttonLabel }}
+          {{ props.buttonLabel }}
         </el-button>
       </div>
     </div>
     <el-button
         v-if="isShowDescriptionButton"
-        :class="['el-button--mini', `el-button--${type}`]"
+        :class="['el-button--mini', `el-button--${props.type}`]"
         @click="handleButton"
         plain>
-      {{ buttonLabel }}
+      {{ props.buttonLabel }}
     </el-button>
   </div>
 </template>
@@ -35,36 +35,36 @@
 <script setup lang="ts">
 import { computed, defineProps, withDefaults } from 'vue';
 import { AlertProps, AlertType } from "@/components/Alert/alertType";
-import InfoCircle from "@/icons/InfoCircle.vue";
-import SuccessCircle from "@/icons/SuccessCircle.vue";
-import DangerCircle from "@/icons/DangerCircle.vue";
-import WarningCircle from "@/icons/WarningCircle.vue";
+import InfoCircleIcon from "@/icons/InfoCircleIcon.vue";
+import SuccessCircleIcon from "@/icons/SuccessCircleIcon.vue";
+import DangerCircleIcon from "@/icons/DangerCircleIcon.vue";
+import WarningCircleIcon from "@/icons/WarningCircleIcon.vue";
 
 const fontSize = 'var(--comp-alert-sizing-icon-prefix-2line)';
 
-const { type, title, description, buttonLabel, handleButton, center } = withDefaults(defineProps<AlertProps>(), {
+const props = withDefaults(defineProps<AlertProps>(), {
   center: false,
 });
 
 const AlertIcon = computed(() => {
-  switch (type) {
+  switch (props.type) {
     case AlertType.success:
-      return SuccessCircle;
+      return SuccessCircleIcon;
     case AlertType.warning:
-      return WarningCircle;
+      return WarningCircleIcon;
     case AlertType.info:
-      return InfoCircle;
+      return InfoCircleIcon;
     case AlertType.danger:
     default:
-      return DangerCircle;
+      return DangerCircleIcon;
   }
 })
 
-const isShowTitleButton = computed(() => buttonLabel && title)
-const isShowDescriptionButton = computed(() => buttonLabel && !title)
+const isShowTitleButton = computed(() => props.buttonLabel && props.title)
+const isShowDescriptionButton = computed(() => props.buttonLabel && !props.title)
 // title 혹은 button을 사용하면, center 속성을 이용할 수 없습니다.
-const existEveryText = computed(() => title && description)
-const isCenter = computed(() => !existEveryText.value && !buttonLabel && center)
+const existEveryText = computed(() => props.title && props.description)
+const isCenter = computed(() => !existEveryText.value && !props.buttonLabel && props.center)
 </script>
 
 <style scoped>

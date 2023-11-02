@@ -20,10 +20,10 @@
 
 <script setup lang="ts">
 import { ElMessage } from 'element-plus'
-import InfoCircle from '@/icons/InfoCircle.vue';
-import SuccessCircle from "@/icons/SuccessCircle.vue";
-import WarningCircle from "@/icons/WarningCircle.vue";
-import DangerCircle from "@/icons/DangerCircle.vue";
+import InfoCircleIcon from '@/icons/InfoCircleIcon.vue';
+import SuccessCircleIcon from "@/icons/SuccessCircleIcon.vue";
+import WarningCircleIcon from "@/icons/WarningCircleIcon.vue";
+import DangerCircleIcon from "@/icons/DangerCircleIcon.vue";
 
 const open = () => {
   ElMessage({
@@ -44,27 +44,27 @@ const openCenter = () => {
 const open1 = () => {
   ElMessage({
     message: 'this is a message.',
-    icon: InfoCircle
+    icon: InfoCircleIcon
   })
 }
 const open2 = () => {
   ElMessage({
     message: 'Congrats, this is a success message.',
     type: 'success',
-    icon: SuccessCircle
+    icon: SuccessCircleIcon
   })
 }
 const open3 = () => {
   ElMessage({
     message: 'Warning, this is a warning message.',
     type: 'warning',
-    icon: WarningCircle
+    icon: WarningCircleIcon
   })
 }
 const open4 = () => {
   ElMessage.error({
     message: 'Oops, this is a error message.',
-    icon: DangerCircle
+    icon: DangerCircleIcon
   })
 }
 
@@ -72,7 +72,7 @@ const open5 = () => {
   ElMessage({
     showClose: true,
     message: 'This is a message.',
-    icon: InfoCircle
+    icon: InfoCircleIcon
   })
 }
 </script>
