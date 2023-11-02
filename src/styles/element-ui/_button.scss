@@ -2,7 +2,9 @@
 @mixin button-sizing($padding, $height, $font, $image) {
   padding: 0 $padding;
   height: $height;
-  font: $font;
+  &, * {
+    font: $font;
+  }
   img {
     height: $image;
   }
@@ -13,7 +15,9 @@
   padding: 0;
   width: $sizing;
   height: $sizing;
-  font: $font;
+  &, * {
+    font: $font;
+  }
   img {
     height: $image;
   }
