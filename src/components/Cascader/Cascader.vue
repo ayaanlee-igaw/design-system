@@ -44,7 +44,7 @@ const props = {
 
 const props2 = { multiple: true }
 
-const handleChange = (value) => {
+const handleChange = (value: any) => {
   console.log(value)
 }
 

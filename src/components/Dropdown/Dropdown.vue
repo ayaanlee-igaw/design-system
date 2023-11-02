@@ -112,6 +112,7 @@
 
 <script setup lang="ts">
 import {
+  Plus,
   ArrowDown,
   Check,
   CircleCheck,

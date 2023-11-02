@@ -110,7 +110,7 @@
 </template>
 
 <script setup lang="ts">
-const buttons = [
+const buttons: any = [
   { type: '', text: 'plain' },
   { type: 'primary', text: 'primary', class: 'el-button--large' },
   { type: 'success', text: 'success', class: 'el-button--medium' },
