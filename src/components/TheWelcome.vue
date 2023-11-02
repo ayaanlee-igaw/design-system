@@ -1,5 +1,7 @@
 <template>
   <div style="display: flex; flex-direction: column; gap: 20px;">
+    <Alerts />
+    <hr class="my-4" />
     <Badge />
     <hr class="my-4" />
     <Breadcrumb />
@@ -60,4 +62,5 @@
   import Popover from "@/components/Popover/Popover.vue";
   import Dialog from "@/components/Dialog/Dialog.vue";
   import Message from "@/components/Message/Message.vue";
+  import Alerts from "@/components/Alerts/Alerts.vue";
 </script>
