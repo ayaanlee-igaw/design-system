@@ -1,4 +1,3 @@
-<!-- description에 관해서만 slot을 받을 수 있습니다. -->
 <template>
   <div :class="['alert-wrap', type, { 'center': isCenter }, { 'is-description-button': isShowDescriptionButton }]">
     <div class="alert">
