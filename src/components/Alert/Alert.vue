@@ -8,9 +8,9 @@
         <div class="alert-contents">
           <p v-if="title" class="alert-contents-title">{{ props.title }}</p>
           <slot>
-            <span v-if="props.description">
+            <p v-if="props.description" class="alert-contents-description">
               {{ props.description }}
-            </span>
+            </p>
           </slot>
         </div>
         <el-button

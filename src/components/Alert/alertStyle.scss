@@ -47,6 +47,9 @@
           color: var(--comp-alert-typography-title);
           vertical-align: top;
         }
+        .alert-contents-description {
+          margin-top: var(--comp-alert-spacing-gap-text);
+        }
       }
       .el-button {
         margin-top: var(--comp-alert-spacing-gap-content);
