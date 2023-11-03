@@ -16,12 +16,22 @@
   }
 
   // suffix
-  .el-input.el-input--suffix.is-focus {
+  .el-input.el-input--suffix {
+    &.is-focus {
+      .el-input__wrapper {
+        .el-input__suffix {
+          .el-input__suffix-inner {
+            color: var(--comp-select-color-icon-active);
+          }
+        }
+      }
+    }
     .el-input__wrapper {
       .el-input__suffix {
         .el-input__suffix-inner {
+          color: var(--comp-select-color-icon-helper);
           .el-icon {
-            color: var(--comp-select-color-icon-active);
+            margin-left: var(--comp-select-spacing-gap);
           }
         }
       }
