@@ -133,13 +133,25 @@
         .el-cascader-menu__list {
           padding: var(--comp-cascader-spacing-popper-vertical-list) 0;
           .el-cascader-node {
+            display: flex;
+            gap: var(--comp-cascader-spacing-list-gap);
             padding: var(--comp-cascader-spacing-list-vertical) var(--comp-cascader-spacing-list-horizontal);
             font: var(--comp-cascader-typography-list-text);
             color: var(--comp-cascader-color-list-text);
 
+            // cascader node contents spacing
+            .el-cascader-node__label {
+              padding: 0;
+            }
+            .el-checkbox {
+              margin: 0;
+            }
+
             // cascader prefix
             .el-cascader-node__prefix {
-              left: 6px;
+              //left: 6px;
+              left: unset;
+              right: var(--comp-cascader-spacing-list-horizontal);
             }
 
             // cascader postfix
