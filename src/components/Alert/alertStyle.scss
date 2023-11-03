@@ -8,7 +8,6 @@
 }
 
 .alert-wrap {
-  display: flex;
   padding: var(--comp-alert-spacing-vertical) var(--comp-alert-spacing-horizontal);
   border-radius: var(--comp-alert-border-radius-default);
 
@@ -20,6 +19,7 @@
   // description button
   &.is-description-button {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
