@@ -34,10 +34,24 @@
 // element ui 내부적으로 el-input 사용
 // input.scss 파일 참고
 .el-select {
+  // hover, focus box shadow delete
   &:hover, &.is-focus {
     .el-input {
       .el-input__wrapper {
         box-shadow: none;
+      }
+    }
+  }
+
+  // suffix
+  .el-input.el-input--suffix.is-focus {
+    .el-input__wrapper {
+      .el-input__suffix {
+        .el-input__suffix-inner {
+          .el-icon {
+            color: var(--comp-select-color-icon-active);
+          }
+        }
       }
     }
   }
