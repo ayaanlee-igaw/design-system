@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 01 Nov 2023 08:51:22 GMT
+ * Generated on Fri, 03 Nov 2023 02:56:59 GMT
  */
 
 :root {
@@ -32,9 +32,19 @@
   --sys-typography-label-sm: var(--ref-fontweight-medium) var(--ref-fontsize-14px)/var(--ref-lineheight-22px) var(--ref-fontfamily-pretendard);
   --sys-typography-label-md: var(--ref-fontweight-medium) var(--ref-fontsize-14px)/var(--ref-lineheight-22px) var(--ref-fontfamily-pretendard);
   --sys-typography-label-lg: var(--ref-fontweight-medium) var(--ref-fontsize-16px)/var(--ref-lineheight-24px) var(--ref-fontfamily-pretendard);
-  --ui-typography-body-accent: var(--sys-typography-text-lg);
-  --ui-typography-body-sub: var(--sys-typography-text-mn);
-  --ui-typography-body-base: var(--sys-typography-text-md);
+  --ui-typography-headline-h4-group: var(--sys-typography-headline-mn);
+  --ui-typography-headline-h3-article: var(--sys-typography-headline-sm);
+  --ui-typography-headline-h2-section: var(--sys-typography-headline-md);
+  --ui-typography-headline-h1-page: var(--sys-typography-headline-lg);
+  --ui-typography-body-big-bold: var(--sys-typography-text-lg-bold);
+  --ui-typography-body-big-medium: var(--sys-typography-text-lg-medium);
+  --ui-typography-body-big-regular: var(--sys-typography-text-lg);
+  --ui-typography-body-sub-bold: var(--sys-typography-text-mn-bold);
+  --ui-typography-body-sub-medium: var(--sys-typography-text-mn-medium);
+  --ui-typography-body-sub-regular: var(--sys-typography-text-mn);
+  --ui-typography-body-base-bold: var(--sys-typography-text-md-bold);
+  --ui-typography-body-base-medium: var(--sys-typography-text-md-medium);
+  --ui-typography-body-base-regular: var(--sys-typography-text-md);
   --ui-typography-title-small: var(--sys-typography-title-mn-bold);
   --ui-typography-title-medium: var(--sys-typography-title-md-bold);
   --ui-typography-title-large: var(--sys-typography-title-lg-bold);
@@ -60,6 +70,7 @@
   --comp-tag-typography-text-medium: var(--sys-typography-text-md);
   --comp-tag-typography-text-large: var(--sys-typography-text-lg);
   --comp-toast-typography-text: var(--sys-typography-text-lg);
+  --comp-cascader-typography-list-selected: var(--sys-typography-text-sm-bold);
   --comp-cascader-typography-list-text: var(--sys-typography-text-sm);
   --comp-alert-typography-text: var(--sys-typography-text-mn);
   --comp-alert-typography-title: var(--sys-typography-title-md);
@@ -69,18 +80,18 @@
   --comp-checkbox-typography-text-small-selected: var(--sys-typography-text-sm-bold);
   --comp-checkbox-typography-text-medium-selected: var(--sys-typography-text-md-bold);
   --comp-checkbox-typography-text-large-selected: var(--sys-typography-text-lg-bold);
-  --comp-checkbox-typography-text-mini: var(--sys-typography-text-mn);
-  --comp-checkbox-typography-text-small: var(--sys-typography-text-sm);
-  --comp-checkbox-typography-text-medium: var(--sys-typography-text-md);
-  --comp-checkbox-typography-text-large: var(--sys-typography-text-lg);
+  --comp-checkbox-typography-text-mini: var(--sys-typography-text-mn-medium);
+  --comp-checkbox-typography-text-small: var(--sys-typography-text-sm-medium);
+  --comp-checkbox-typography-text-medium: var(--sys-typography-text-md-medium);
+  --comp-checkbox-typography-text-large: var(--sys-typography-text-lg-medium);
   --comp-radio-typography-text-mini-selected: var(--sys-typography-text-mn-bold);
   --comp-radio-typography-text-small-selected: var(--sys-typography-text-sm-bold);
   --comp-radio-typography-text-medium-selected: var(--sys-typography-text-md-bold);
   --comp-radio-typography-text-large-selected: var(--sys-typography-text-lg-bold);
-  --comp-radio-typography-text-mini: var(--sys-typography-text-mn);
-  --comp-radio-typography-text-small: var(--sys-typography-text-sm);
-  --comp-radio-typography-text-medium: var(--sys-typography-text-md);
-  --comp-radio-typography-text-large: var(--sys-typography-text-lg);
+  --comp-radio-typography-text-mini: var(--sys-typography-text-mn-medium);
+  --comp-radio-typography-text-small: var(--sys-typography-text-sm-medium);
+  --comp-radio-typography-text-medium: var(--sys-typography-text-md-medium);
+  --comp-radio-typography-text-large: var(--sys-typography-text-lg-medium);
   --comp-dialog-typography-content-text: var(--sys-typography-text-sm);
   --comp-dialog-typography-title: var(--sys-typography-title-lg);
   --comp-forms-typography-title-mini: var(--sys-typography-title-mn);

@@ -1,12 +1,8 @@
 // check box bordered sizing mixin
-@mixin checkbox-bordered-sizing($height, $font, $selected-font) {
+@mixin checkbox-bordered-sizing($height, $font) {
   height: $height;
   font: $font;
   border-radius: var(--comp-checkbox-border-radius-button);
-  &.is-checked,
-  &.is-checked.is-disabled {
-    font: $selected-font;
-  }
   &.is-disabled {
     font: $font;
   }
@@ -91,29 +87,25 @@
     &, &.el-checkbox--large {
       @include checkbox-bordered-sizing(
       var(--comp-checkbox-sizing-button-height-large),
-      var(--comp-checkbox-typography-text-large),
-      var(--comp-checkbox-typography-text-large-selected)
+      var(--comp-checkbox-typography-text-large)
       );
     }
     &.el-checkbox--medium {
       @include checkbox-bordered-sizing(
       var(--comp-checkbox-sizing-button-height-medium),
-      var(--comp-checkbox-typography-text-medium),
-      var(--comp-checkbox-typography-text-medium-selected)
+      var(--comp-checkbox-typography-text-medium)
       );
     }
     &.el-checkbox--small {
       @include checkbox-bordered-sizing(
       var(--comp-checkbox-sizing-button-height-small),
-      var(--comp-checkbox-typography-text-small),
-      var(--comp-checkbox-typography-text-small-selected)
+      var(--comp-checkbox-typography-text-small)
       );
     }
     &.el-checkbox--mini {
       @include checkbox-bordered-sizing(
       var(--comp-checkbox-sizing-button-height-mini),
-      var(--comp-checkbox-typography-text-mini),
-      var(--comp-checkbox-typography-text-mini-selected)
+      var(--comp-checkbox-typography-text-mini)
       );
     }
   }

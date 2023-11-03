@@ -1,14 +1,9 @@
 // radio bordered sizing mixin
-@mixin radio-bordered-sizing($height, $font, $selected-font) {
+@mixin radio-bordered-sizing($height, $font) {
   padding: 0 var(--comp-radio-spacing-button-horizontal);
   height: $height;
   .el-radio__label {
     font: $font;
-  }
-  &.is-checked {
-    .el-radio__label {
-      //font: $selected-font;
-    }
   }
 }
 
@@ -75,7 +70,6 @@
     }
     .el-radio__label {
       padding-left: var(--comp-radio-spacing-radio-right);
-      //font: var(--comp-radio-typography-text-large-selected);
       color: var(--comp-radio-color-text-selected);
     }
   }
@@ -99,29 +93,25 @@
     &, &.el-radio--large {
       @include radio-bordered-sizing(
           var(--comp-radio-sizing-button-height-large),
-          var(--comp-radio-typography-text-large),
-          var(--comp-radio-typography-text-large-selected)
+          var(--comp-radio-typography-text-large)
       );
     }
     &.el-radio--medium {
       @include radio-bordered-sizing(
           var(--comp-radio-sizing-button-height-medium),
-          var(--comp-radio-typography-text-medium),
-          var(--comp-radio-typography-text-medium-selected)
+          var(--comp-radio-typography-text-medium)
       );
     }
     &.el-radio--small {
       @include radio-bordered-sizing(
           var(--comp-radio-sizing-button-height-small),
-          var(--comp-radio-typography-text-small),
-          var(--comp-radio-typography-text-small-selected)
+          var(--comp-radio-typography-text-small)
       );
     }
     &.el-radio--mini {
       @include radio-bordered-sizing(
           var(--comp-radio-sizing-button-height-mini),
-          var(--comp-radio-typography-text-mini),
-          var(--comp-radio-typography-text-mini-selected)
+          var(--comp-radio-typography-text-mini)
       );
     }
   }
