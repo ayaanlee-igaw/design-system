@@ -22,6 +22,7 @@
     // breadcrumb separator
     .el-breadcrumb__separator {
       margin: 0 var(--comp-breadcrumb-spacing-horizontal-basic);
+      font: var(--comp-breadcrumb-typography-sub-title);
       color: var(--comp-breadcrumb-color-separator);
     }
   }
