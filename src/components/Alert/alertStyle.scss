@@ -39,6 +39,9 @@
     // contents
     .alert-contents-wrap {
       .alert-contents {
+        display: flex;
+        flex-direction: column;
+        gap: var(--comp-alert-spacing-gap-text);
         font: var(--comp-alert-typography-text);
         color: var(--comp-alert-color-text-description);
         .alert-contents-title {
@@ -46,9 +49,6 @@
           font: var(--comp-alert-typography-title);
           color: var(--comp-alert-typography-title);
           vertical-align: top;
-        }
-        .alert-contents-description {
-          margin-top: var(--comp-alert-spacing-gap-text);
         }
       }
       .el-button {

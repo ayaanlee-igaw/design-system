@@ -162,7 +162,10 @@
             // cascader active
             &.in-active-path,
             &.is-active {
-              color: var(--comp-cascader-color-list-text-selected);
+              * {
+                font: var(--comp-cascader-typography-list-selected);
+                color: var(--comp-cascader-color-list-text-selected);
+              }
             }
 
             // cascader hover
