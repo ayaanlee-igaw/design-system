@@ -1,6 +1,14 @@
 // element ui 내부적으로 el-input 사용
 // input.scss 파일 참고
 .el-cascader {
+  // box shadow none
+  &:hover {
+    .el-input__wrapper.is-focus {
+      box-shadow: none;
+    }
+  }
+
+  // default padding
   .el-input {
     .el-input__wrapper {
       padding: 0 var(--comp-select-spacing-horizontal);
@@ -11,6 +19,9 @@
       .el-input__wrapper {
         border: var(--comp-select-border-selected);
         box-shadow: none;
+        .el-input__inner {
+          box-shadow: none;
+        }
       }
     }
   }
