@@ -37,7 +37,7 @@
   &.is-light {
     background-color: var(--comp-scroll-item-color-background);
     border: none;
-    box-shadow: var(--comp-scroll-item-opacity-list);
+    box-shadow: var(--comp-scroll-item-boxshadow-list);
 
     .el-scrollbar {
       .el-scrollbar__wrap {
@@ -50,7 +50,7 @@
             // dropdown item
             .el-dropdown-menu__item {
               padding: var(--comp-scroll-item-spacing-item-vertical) var(--comp-scroll-item-spacing-item-horizontal);
-              background-color: var(--comp-scroll-item-color-item-background);
+              //background-color: var(--comp-scroll-item-color-item-background);
 
               &.is--active {
                 color: var(--comp-scroll-item-color-item-text-selected);
@@ -62,7 +62,7 @@
               }
 
               // dropdown item hover
-              &:hover {
+              &:not(.is-disabled):hover {
                 background-color: var(--comp-scroll-item-color-item-background-hover);
               }
 

@@ -199,7 +199,7 @@
             padding: var(--comp-scroll-item-spacing-item-vertical) $padding-right-with-check-icon var(--comp-scroll-item-spacing-item-vertical) var(--comp-scroll-item-spacing-item-horizontal);
             font: var(--comp-scroll-item-typography-item-text);
             color: var(--comp-scroll-item-color-item-text);
-            background-color: var(--comp-scroll-item-color-item-background);
+            //background-color: var(--comp-scroll-item-color-item-background);
 
             // dropdown item check ui
             &::after {
@@ -236,7 +236,7 @@
               padding: var(--comp-scroll-item-spacing-item-vertical) var(--comp-scroll-item-spacing-item-horizontal);
               font: var(--comp-scroll-item-typography-item-title);
               color: var(--comp-scroll-item-color-item-text-title);
-              background-color: var(--comp-scroll-item-color-item-background);
+              //background-color: var(--comp-scroll-item-color-item-background);
             }
           }
         }
