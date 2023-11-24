@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Nov 2023 02:56:59 GMT
+ * Generated on Wed, 22 Nov 2023 07:38:51 GMT
  */
 
 :root {
@@ -104,6 +104,8 @@
   --sys-color-text-placeholder: var(--ref-color-neutral-75);
   --sys-color-text-sub: var(--ref-color-neutral-45);
   --sys-color-text-base: var(--ref-color-neutral-25);
+  --sys-color-background-dark-pressed: var(--ref-color-neutral-45);
+  --sys-color-background-dark: var(--ref-color-neutral-75);
   --sys-color-background-opacity-dark-10: var(--ref-color-opacity-background-black-10);
   --sys-color-background-disabled: var(--ref-color-neutral-97);
   --sys-color-background-inverse: var(--ref-color-neutral-15);
@@ -129,7 +131,8 @@
   --sys-color-background-accent-secondary-tint-pressed: var(--ref-color-neutral-85);
   --sys-color-background-accent-secondary-tinit-hover: var(--ref-color-neutral-99);
   --sys-color-background-accent-secondary-tint: var(--ref-color-neutral-95);
-  --sys-color-background-accent-primary-base-hover: var(--ref-color-primary-95);
+  --sys-color-background-accent-primary-base-selected: var(--ref-color-primary-95);
+  --sys-color-background-accent-primary-base-hover: var(--ref-color-neutral-97);
   --sys-color-background-accent-primary-base: var(--ref-color-primary-100);
   --sys-color-background-accent-primary-tint-pressed: var(--ref-color-primary-85);
   --sys-color-background-accent-primary-tint-hover: var(--ref-color-primary-99);
@@ -168,6 +171,27 @@
   --ui-color-background-tonal-primary: var(--sys-color-background-accent-primary-tinit);
   --ui-color-background-base-variant: var(--sys-color-background-base-variant);
   --ui-color-background-base: var(--sys-color-background-base);
+  --comp-step-color-text: var(--sys-color-text-placeholder);
+  --comp-step-color-text-active: var(--sys-color-text-sub);
+  --comp-step-color-border-dashed: var(--sys-color-border-base);
+  --comp-step-color-number-background: var(--sys-color-background-dark);
+  --comp-step-color-number-background-active: var(--sys-color-background-dark-pressed);
+  --comp-navigation-color-lnb-outline: var(--sys-color-outline-base);
+  --comp-navigation-color-gnb-border-right: var(--sys-color-border-base);
+  --comp-navigation-color-gnb-background: var(--sys-color-background-base);
+  --comp-navigation-color-gnb-menu-main-background-selected: var(--sys-color-background-accent-primary-base-selected);
+  --comp-navigation-color-gnb-menu-main-background-hover: var(--sys-color-background-accent-primary-base-hover);
+  --comp-navigation-color-gnb-menu-main-title: var(--sys-color-text-base);
+  --comp-navigation-color-gnb-menu-main-icon: var(--sys-color-icon-base);
+  --comp-navigation-color-gnb-service-text-sub: var(--sys-color-text-sub);
+  --comp-navigation-color-gnb-service-text-title: var(--sys-color-text-base);
+  --comp-navigation-color-gnb-service-icon-arrow: var(--sys-color-icon-base);
+  --comp-navigation-color-gnb-service-outline: var(--sys-color-outline-base);
+  --comp-navigation-color-header-headline: var(--sys-color-text-base);
+  --comp-navigation-color-header-icon: var(--sys-color-icon-base);
+  --comp-navigation-color-header-text-account-organization: var(--sys-color-text-sub);
+  --comp-navigation-color-header-text-account-name: var(--sys-color-text-base);
+  --comp-navigation-color-header-border-bottom: var(--sys-color-border-base);
   --comp-carousel-color-arrow: var(--sys-color-background-opacity-dark-10);
   --comp-carousel-color-indicator: var(--sys-color-background-base);
   --comp-breadcrumb-color-separator: var(--sys-color-text-placeholder);
@@ -202,9 +226,10 @@
   --comp-scroll-item-color-background: var(--sys-color-background-base);
   --comp-scroll-item-color-item-text-title: var(--sys-color-text-placeholder);
   --comp-scroll-item-color-item-text-sub: var(--sys-color-text-placeholder);
+  --comp-scroll-item-color-item-icon: var(--sys-color-icon-base);
   --comp-scroll-item-color-item-text: var(--sys-color-text-base);
+  --comp-scroll-item-color-item-outline-thumbnail: var(--sys-color-outline-base);
   --comp-scroll-item-color-item-background-hover: var(--sys-color-background-base-hover);
-  --comp-scroll-item-color-item-background: var(--sys-color-background-base);
   --comp-tag-color-plain-icon: var(--sys-color-icon-base);
   --comp-tag-color-plain-text: var(--sys-color-text-base);
   --comp-tag-color-plain-outline: var(--sys-color-outline-base);
@@ -396,6 +421,18 @@
   --ui-color-text-success: var(--sys-color-text-accent-success);
   --ui-color-text-secondary: var(--sys-color-text-accent-secondary);
   --ui-color-text-primary: var(--sys-color-text-accent-primary);
+  --comp-step-color-text-number: var(--sys-color-text-inverse);
+  --comp-step-color-border-dashed-active: var(--sys-color-border-accent-secondary);
+  --comp-navigation-color-gnb-menu-main-title-selected: var(--sys-color-text-accent-primary);
+  --comp-navigation-color-gnb-menu-main-icon-selected: var(--sys-color-icon-accent-primary);
+  --comp-navigation-color-gnb-menu-sub-title-dropdown-selected: var(--sys-color-text-accent-secondary);
+  --comp-navigation-color-gnb-menu-sub-title-selected: var(--sys-color-text-accent-primary);
+  --comp-navigation-color-gnb-menu-sub-title-hover: var(--sys-color-text-accent-secondary-hover);
+  --comp-navigation-color-gnb-menu-sub-title: var(--sys-color-text-accent-secondary);
+  --comp-navigation-color-gnb-menu-sub-icon-dropdown-selected: var(--sys-color-icon-accent-secondary);
+  --comp-navigation-color-gnb-menu-sub-icon-dropdown-hover: var(--sys-color-icon-accent-secondary-hover);
+  --comp-navigation-color-gnb-menu-sub-icon-dropdown: var(--sys-color-icon-accent-secondary);
+  --comp-navigation-color-header-outline-avata: var(--sys-color-outline-accent-secondary);
   --comp-carousel-color-arrow-icon: var(--sys-color-icon-inverse);
   --comp-carousel-color-indicator-outside: var(--sys-color-background-accent-secondary);
   --comp-breadcrumb-color-main-title-hover: var(--sys-color-text-base-hover);

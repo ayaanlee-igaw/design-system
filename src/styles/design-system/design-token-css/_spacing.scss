@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Nov 2023 02:56:59 GMT
+ * Generated on Wed, 22 Nov 2023 07:38:51 GMT
  */
 
 :root {
@@ -29,12 +29,40 @@
   --ui-spacing-padding-xlarge: var(--sys-spacing-xlarge);
   --ui-spacing-padding-large: var(--sys-spacing-large);
   --ui-spacing-padding-medium: var(--sys-spacing-medium);
+  --ui-spacing-padding-semi-medium: var(--sys-spacing-semi-small);
   --ui-spacing-padding-small: var(--sys-spacing-small);
+  --ui-spacing-padding-mini: var(--sys-spacing-xsmall);
+  --ui-spacing-gap-icon-large: var(--sys-spacing-medium);
   --ui-spacing-gap-icon-medium: var(--sys-spacing-small);
   --ui-spacing-gap-icon-small: var(--sys-spacing-xsmall);
+  --ui-spacing-gap-xxlarge: var(--sys-spacing-xxlarge);
+  --ui-spacing-gap-xlarge: var(--sys-spacing-xlarge);
   --ui-spacing-gap-large: var(--sys-spacing-large);
   --ui-spacing-gap-medium: var(--sys-spacing-medium);
   --ui-spacing-gap-small: var(--sys-spacing-small);
+  --comp-step-spacing-gap-row: var(--sys-spacing-small);
+  --comp-step-spacing-gap: var(--sys-spacing-small);
+  --comp-navigation-spacing-gnb-entry-headline-horizontal-padding: var(--sys-spacing-semi-small);
+  --comp-navigation-spacing-gnb-entry-headline-vertical-padding: var(--sys-spacing-large);
+  --comp-navigation-spacing-gnb-menu-sub-vertical-margin: var(--sys-spacing-small);
+  --comp-navigation-spacing-gnb-menu-horizontal-margin: var(--sys-spacing-medium);
+  --comp-navigation-spacing-gnb-menu-vertical-margin: var(--sys-spacing-medium);
+  --comp-navigation-spacing-gnb-menu-item-sub-dropdown-gap: var(--sys-spacing-small);
+  --comp-navigation-spacing-gnb-menu-item-main-gap: var(--sys-spacing-medium);
+  --comp-navigation-spacing-gnb-menu-item-sub-dropdown-horizontal-padding: var(--sys-spacing-small);
+  --comp-navigation-spacing-gnb-menu-item-sub-horizontal-padding: var(--sys-spacing-large);
+  --comp-navigation-spacing-gnb-menu-item-main-horizontal-padding: var(--sys-spacing-semi-small);
+  --comp-navigation-spacing-gnb-service-gap-infomation: var(--sys-spacing-small);
+  --comp-navigation-spacing-gnb-service-gap: var(--sys-spacing-small);
+  --comp-navigation-spacing-gnb-service-vertical-padding: var(--sys-spacing-semi-small);
+  --comp-navigation-spacing-gnb-service-horizontal-margin-close: var(--sys-spacing-small);
+  --comp-navigation-spacing-gnb-service-horizontal-padding: var(--sys-spacing-semi-small);
+  --comp-navigation-spacing-header-horizontal-bar: var(--sys-spacing-medium);
+  --comp-navigation-spacing-header-left-gap: var(--sys-spacing-small);
+  --comp-navigation-spacing-header-left-horizontal-logo-group: var(--sys-spacing-medium);
+  --comp-navigation-spacing-header-right-gap-account: var(--sys-spacing-small);
+  --comp-navigation-spacing-header-right-gap: var(--sys-spacing-medium);
+  --comp-navigation-spacing-header-right-horizontal-icon-menu: var(--sys-spacing-medium);
   --comp-carousel-sizing-vertical-indicator: var(--sys-spacing-semi-small);
   --comp-carousel-sizing-horizontal-image: var(--sys-spacing-semi-small);
   --comp-carousel-sizing-horizontal-indicator: var(--sys-spacing-medium);
@@ -64,7 +92,6 @@
   --comp-tooltip-spacing-horizontal-position: var(--sys-spacing-semi-small);
   --comp-slider-spacing-horizontal-dash-dot: var(--sys-spacing-xlarge);
   --comp-slider-spacing-gap-dash-dot: var(--sys-spacing-xlarge);
-  --comp-scroll-item-spacing-vertical-divider: var(--sys-spacing-small);
   --comp-scroll-item-spacing-horizontal-divider: var(--sys-spacing-semi-small);
   --comp-scroll-item-spacing-vertical: var(--sys-spacing-small);
   --comp-scroll-item-spacing-item-gap: var(--sys-spacing-small);
@@ -128,6 +155,7 @@
   --comp-button-spacing-horizontal-small: var(--sys-spacing-semi-small);
   --comp-button-spacing-horizontal-medium: var(--sys-spacing-medium);
   --comp-button-spacing-horizontal-large: var(--sys-spacing-semi-large);
+  --comp-navigation-spacing-gnb-header-group-horizontal-margin: var(--comp-alert-spacing-horizontal);
   --comp-dropdown-spacing-text-gap: var(--comp-button-spacing-gap);
   --comp-select-spacing-gap: var(--comp-input-spacing-gap);
   --comp-select-spacing-horizontal: var(--comp-input-spacing-horizontal);
@@ -138,4 +166,5 @@
   --comp-input-spacing-slot-button-horizontal-medium: var(--comp-button-spacing-horizontal-medium);
   --comp-input-spacing-slot-button-horizontal-large: var(--comp-button-spacing-horizontal-large);
   --comp-input-spacing-slot-plaintext-horizontal: var(--comp-input-spacing-horizontal);
+  --comp-navigation-spacing-gnb-service-horizontal-margin-open: var(--comp-navigation-spacing-gnb-header-group-horizontal-margin);
 }

@@ -1,9 +1,17 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Nov 2023 02:56:59 GMT
+ * Generated on Wed, 22 Nov 2023 07:38:51 GMT
  */
 
 :root {
+  --ui-border-divider: var(--ui-borderwidth-default) solid var(--ui-color-border-base);
+  --ui-border-outline-base: var(--ui-borderwidth-default) solid var(--ui-color-outline-base);
+  --comp-step-border-dashed: var(--comp-step-borderwidth-dashed) dashed var(--comp-step-color-border-dashed);
+  --comp-navigation-border-lnb: var(--comp-navigation-borderwidth-default) solid var(--comp-navigation-color-lnb-outline);
+  --comp-navigation-border-service-outline: var(--comp-navigation-borderwidth-default) solid var(--comp-navigation-color-gnb-service-outline);
+  --comp-navigation-border-gnb-right: var(--comp-navigation-borderwidth-default) solid var(--comp-navigation-color-gnb-border-right);
+  --comp-navigation-border-header-bottom: var(--comp-navigation-borderwidth-default) solid var(--comp-navigation-color-header-border-bottom);
+  --comp-scroll-item-border-item-outline-thumbnail: var(--comp-scroll-item-border-width-item-outline-thumbnail) solid var(--comp-scroll-item-color-item-outline-thumbnail);
   --comp-upload-border-drag-file: var(--comp-upload-borderwidth-drag-file) dashed var(--comp-upload-color-drag-file-outline);
   --comp-dialog-border-side-button-top: var(--comp-dialog-borderwidth-default) solid var(--comp-dialog-color-border-divider);
   --comp-dialog-border-side-title-bottom: var(--comp-dialog-borderwidth-default) solid var(--comp-dialog-color-border-divider);
@@ -33,6 +41,8 @@
   --comp-button-border-plain-hover: var(--comp-button-borderwidth-default) solid var(--comp-button-color-outline-base-hover);
   --comp-button-border-plain-pressed: var(--comp-button-borderwidth-default) solid var(--comp-button-color-outline-base-pressed);
   --comp-button-border-plain-default: var(--comp-button-borderwidth-default) solid var(--comp-button-color-outline-base);
+  --comp-step-border-dashed-active: var(--comp-step-borderwidth-dashed) dashed var(--comp-step-color-border-dashed-active);
+  --comp-navigation-border-avata-outline: var(--comp-navigation-borderwidth-default) solid var(--comp-navigation-color-header-outline-avata);
   --comp-alert-border-error: var(--comp-alert-borderwidth-point) solid var(--comp-alert-color-border-error);
   --comp-alert-border-warning: var(--comp-alert-borderwidth-point) solid var(--comp-alert-color-border-warning);
   --comp-alert-border-info: var(--comp-alert-borderwidth-point) solid var(--comp-alert-color-border-info);

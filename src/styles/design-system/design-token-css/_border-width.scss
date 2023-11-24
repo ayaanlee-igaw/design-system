@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Nov 2023 02:56:59 GMT
+ * Generated on Wed, 22 Nov 2023 07:38:51 GMT
  */
 
 :root {
@@ -13,6 +13,9 @@
   --ui-borderwidth-strong: var(--sys-border-width-bold);
   --ui-borderwidth-bold: var(--sys-border-width-regular);
   --ui-borderwidth-default: var(--sys-border-width-thin);
+  --comp-step-borderwidth-dashed: var(--sys-border-width-thin);
+  --comp-scroll-item-border-width-item-outline-thumbnail: var(--sys-border-width-thin);
+  --comp-navigation-borderwidth-default: var(--sys-border-width-thin);
   --comp-alert-borderwidth-point: var(--sys-border-width-bold);
   --comp-upload-borderwidth-drag-file: var(--sys-border-width-thin);
   --comp-dialog-borderwidth-default: var(--sys-border-width-thin);

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Nov 2023 02:56:59 GMT
+ * Generated on Wed, 22 Nov 2023 07:38:51 GMT
  */
 
 :root {
@@ -58,9 +58,27 @@
   --sys-sizing-icon-xxsmall: var(--ref-sizing-8px);
   --sys-sizing-icon-xsmall: var(--ref-sizing-12px);
   --sys-sizing-icon-mini: var(--ref-sizing-2px);
+  --ui-sizing-height-xlarge: var(--sys-sizing-10unit-xxlarge);
+  --ui-sizing-height-medium: var(--sys-sizing-10unit-large);
+  --ui-sizing-thumbnail-medium: var(--sys-sizing-10unit-semi-large);
+  --ui-sizing-thumbnail-small: var(--sys-sizing-10unit-medium);
   --ui-sizing-icon-medium: var(--sys-sizing-icon-large);
   --ui-sizing-icon-small: var(--sys-sizing-icon-medium);
   --ui-sizing-icon-mini: var(--sys-sizing-icon-xsmall);
+  --comp-step-sizing-number: var(--sys-sizing-10unit-small);
+  --comp-navigation-sizing-gnb-menu-sub-icon-dropdown: var(--sys-sizing-icon-xxsmall);
+  --comp-navigation-sizing-gnb-menu-icon-prefix: var(--sys-sizing-10unit-semi-small);
+  --comp-navigation-sizing-gnb-menu-item-sub-height: var(--sys-sizing-10unit-medium);
+  --comp-navigation-sizing-gnb-menu-item-main-height: var(--sys-sizing-10unit-large);
+  --comp-navigation-sizing-gnb-service-icon-arrow: var(--sys-sizing-icon-large);
+  --comp-navigation-sizing-gnb-service-thumbnail: var(--sys-sizing-10unit-semi-large);
+  --comp-navigation-sizing-header-logo-width-close: var(--sys-sizing-10unit-large);
+  --comp-navigation-sizing-header-avata-group: var(--sys-sizing-10unit-semi-large);
+  --comp-navigation-sizing-header-account-width: var(--sys-sizing-100unit-xxsmall);
+  --comp-navigation-sizing-header-account-icon-arrow: var(--sys-sizing-icon-xsmall);
+  --comp-navigation-sizing-header-icon: var(--sys-sizing-icon-medium);
+  --comp-navigation-sizing-header-icon-menu: var(--sys-sizing-icon-large);
+  --comp-navigation-sizing-header-height: var(--sys-sizing-10unit-xxlarge);
   --comp-carousel-sizing-arrow-icon: var(--sys-sizing-icon-xsmall);
   --comp-carousel-sizing-arrow: var(--sys-sizing-10unit-medium);
   --comp-carousel-sizing-height-indicator: var(--sys-sizing-icon-mini);
@@ -97,7 +115,9 @@
   --comp-slider-sizing-width-line: var(--sys-sizing-100unit-medium);
   --comp-scroll-item-sizing-position-height: var(--sys-sizing-icon-xxsmall);
   --comp-scroll-item-sizing-position-width: var(--sys-sizing-icon-medium);
-  --comp-scroll-item-sizing-item-icon: var(--sys-sizing-icon-small);
+  --comp-scroll-item-sizing-item-icon-prefix-area: var(--sys-sizing-10unit-medium);
+  --comp-scroll-item-sizing-item-icon-prefix: var(--sys-sizing-10unit-semi-small);
+  --comp-scroll-item-sizing-item-icon-suffix: var(--sys-sizing-icon-medium);
   --comp-tag-sizing-icon-mini: var(--sys-sizing-icon-xsmall);
   --comp-tag-sizing-icon-small: var(--sys-sizing-icon-xsmall);
   --comp-tag-sizing-icon-medium: var(--sys-sizing-icon-small);
@@ -163,6 +183,7 @@
   --comp-button-sizing-small: var(--sys-sizing-10unit-medium);
   --comp-button-sizing-medium: var(--sys-sizing-10unit-semi-large);
   --comp-button-sizing-large: var(--sys-sizing-10unit-large);
+  --comp-navigation-sizing-header-avata: var(--comp-navigation-sizing-header-avata-group)-4px;
   --comp-dropdown-sizing-text-icon: var(--comp-button-sizing-icon-small);
   --comp-forms-sizing-height-title-mini: var(--comp-input-sizing-height-mini);
   --comp-forms-sizing-height-title-sm: var(--comp-input-sizing-height-small);

@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Nov 2023 02:56:59 GMT
+ * Generated on Wed, 22 Nov 2023 07:38:51 GMT
  */
 
 :root {
@@ -21,6 +21,10 @@
   --ui-border-radius-large: var(--sys-border-radius-level-4);
   --ui-border-radius-medium: var(--sys-border-radius-level-3);
   --ui-border-radius-small: var(--sys-border-radius-level-2);
+  --comp-navigation-border-radius-lnb-fixed: var(--sys-border-radius-none);
+  --comp-navigation-border-radius-lnb-floating: var(--sys-border-radius-level-4);
+  --comp-navigation-border-radius-gnb-item: var(--sys-border-radius-level-3);
+  --comp-navigation-border-radius-gnb-service: var(--sys-border-radius-level-3);
   --comp-upload-border-radius-drag-file: var(--sys-border-radius-level-2);
   --comp-progress-border-radius-bar-end: var(--sys-border-radius-rounded);
   --comp-pagination-border-radius-background: var(--sys-border-radius-level-2);
@@ -28,7 +32,8 @@
   --comp-tooltip-border-radius-tip: var(--sys-border-radius-level-2);
   --comp-switch-border-radius-background: var(--sys-border-radius-rounded);
   --comp-slider-border-radius-default: var(--sys-border-radius-rounded);
-  --comp-scroll-item-border-radius-default: var(--sys-border-radius-level-2);
+  --comp-scroll-item-border-radius-item-thumbnail: var(--sys-border-radius-level-3);
+  --comp-scroll-item-border-radius-default: var(--sys-border-radius-level-3);
   --comp-tag-border-radius-default: var(--sys-border-radius-level-2);
   --comp-dialog-border-radius-default: var(--sys-border-radius-level-2);
   --comp-toast-border-radius-default: var(--sys-border-radius-level-3);
