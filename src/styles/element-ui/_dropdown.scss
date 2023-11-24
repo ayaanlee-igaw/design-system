@@ -34,18 +34,19 @@
 
 // dropdown popper
 .el-popper {
+  border-radius: var(--comp-scroll-item-border-radius-default);
   &.is-light {
     background-color: var(--comp-scroll-item-color-background);
     border: none;
     box-shadow: var(--comp-scroll-item-boxshadow-list);
 
     .el-scrollbar {
+      border-radius: var(--comp-scroll-item-border-radius-default);
       .el-scrollbar__wrap {
         .el-scrollbar__view.el-dropdown__list {
           // dropdown menu
           .el-dropdown-menu {
             padding: var(--comp-scroll-item-spacing-vertical) 0;
-            border-radius: var(--comp-scroll-item-border-radius-default);
 
             // dropdown item
             .el-dropdown-menu__item {
@@ -59,6 +60,11 @@
               &.is-disabled {
                 opacity: var(--comp-scroll-item-opacity-item-disabled);
                 cursor: not-allowed;
+              }
+
+              &[readonly] {
+                cursor: unset;
+                pointer-events: none;
               }
 
               // dropdown item hover
