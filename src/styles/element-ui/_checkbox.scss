@@ -1,8 +1,9 @@
 // check box bordered sizing mixin
 @mixin checkbox-bordered-sizing($height, $font) {
   height: $height;
-  font: $font;
   border-radius: var(--comp-checkbox-border-radius-button);
+
+  .el-checkbox__label,
   &.is-disabled {
     font: $font;
   }
