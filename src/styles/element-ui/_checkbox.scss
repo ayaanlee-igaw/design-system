@@ -11,7 +11,7 @@
 // checkbox
 .el-checkbox {
   &:not(:last-child) {
-    margin-right: var(--comp-radio-spacing-group-row-gap);
+    margin-right: var(--comp-checkbox-spacing-checkbox-right);
   }
   
   .el-checkbox__input {
@@ -22,6 +22,7 @@
     }
   }
   .el-checkbox__label {
+    padding-left: var(--comp-checkbox-spacing-checkbox-right);
     font: var(--comp-checkbox-typography-text-medium);
     color: var(--comp-checkbox-color-text);
   }
